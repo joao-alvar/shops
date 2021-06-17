@@ -9,8 +9,8 @@ const Nav = props => {
            <div className="headerRoom">
            <div className="headerRoom__wrap">
            <ul className="headerRoom__ul">
-           <li><a>Marketplace</a></li>
-           <li><a>Help & FAQs</a></li>
+           <li><a href="#">Marketplace</a></li>
+           <li><a href="#" className="faq">Help & FAQs</a></li>
            </ul>
            </div>
            </div>

@@ -33,7 +33,23 @@ header {
         list-style: none;
         display: flex;
         margin-left: auto;
-        gap: 2em;
+
+        a{
+            text-decoration: none;
+            font-family: $bannerFont;
+            font-size: 1.275em;
+            color: #666;
+            padding: .580em 1.5em .580em 1.5em;
+            border-left: 1px solid #ddd;
+            
+            &:hover {
+                color: #0080eb;
+            }
+        }
+
+         .faq {
+            border-right: 1px solid #ddd;
+            }
     }
     }
 
@@ -60,6 +76,10 @@ nav {
         justify-content: center;
         align-items: center;
         gap: 2em;
+        
+        .logo {
+            font-size: 1.8em;
+        }
     
     .nav__primary__ul {
         list-style: none;
