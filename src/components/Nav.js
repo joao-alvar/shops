@@ -1,4 +1,6 @@
 import React from 'react';
+import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
+import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 
 const Nav = props => {
     return (
@@ -20,8 +22,22 @@ const Nav = props => {
             <li className="li__shop__for__homem"><h3><a href="#">Homem</a></h3></li>
             </ul>
             </div>
+            <div className="nav__icons">
+            <ul className="icon__list">
+            <li><PersonOutlineIcon  style={{ fontSize: 29, cursor: "pointer" }} /></li>
+            <li><LocalMallOutlinedIcon  style={{ fontSize: 27, cursor: "pointer"  }} /></li>
+            </ul>
+            </div>
             </nav>
-           <div className="headerBanner"></div>
+           <div className="headerBanner">
+           <div className="banner__shop__for__mulher"><a href="#">Mulher</a></div>
+           <div className="banner__shop__text"><strong>
+           SALE: AGORA GANHE ATÉ 80% DE DESCONTO!
+           <br/>
+           A SALE DO SHOPS. ficou MAIOR
+           </strong></div>
+           <div className="banner__shop__for__homem"><a href="#">Homem</a></div>
+           </div>
            </div>
         </header>
     );

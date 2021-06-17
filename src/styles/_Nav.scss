@@ -57,7 +57,7 @@ nav {
         align-items: center;
         gap: 2em;
     
-    ul {
+    .nav__primary__ul {
         list-style: none;
         display: flex;
         gap: 2em;
@@ -78,10 +78,38 @@ nav {
         }
         }
 }
+
+.nav__icons {
+    margin-right: 4em;
+
+.icon__list {
+    list-style: none;
+    display: flex;
+    gap: 2em;
 }
+}
+}
+
 .headerBanner {
     width: 100%;
     height: 4.2em;
     background-color: #0080eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .banner__shop__for__mulher {
+        margin-right: auto;
+        margin-left: 4em;
+    }
+
+    .banner__shop__text {
+
+    }
+
+     .banner__shop__for__homem {
+        margin-left: auto;
+        margin-right: 4em;
+    }
 }
 }
