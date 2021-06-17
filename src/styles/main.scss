@@ -1,0 +1,25 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    line-height: 1.30769231;
+}
+
+
+@import 'Nav';

@@ -1,0 +1,87 @@
+header {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .headerContainer {
+         width: 100%;
+         height: 100%;
+         position: relative;
+    }
+
+    .headerRoom {
+        background: #fff;
+        width: 100%;
+        height: 3em;
+
+        .headerRoom__wrap {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 4em;
+        margin-left: auto;
+        }
+        .headerRoom__ul {
+        list-style: none;
+        display: flex;
+        margin-left: auto;
+        gap: 2em;
+    }
+    }
+
+nav {
+    background-color: #2D2D2D;
+    color: #fff;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;     
+    height: 5.5em;
+    min-height: 3em;
+    z-index: 999;
+    justify-content: space-around;
+    align-items: center;
+    transition: 1000ms;
+
+    .nav__main__links {
+        height: 100%;
+        width: auto;
+        margin-right: auto;
+        margin-left: 4em;
+        background-color: #f20;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 2em;
+    }
+
+        .li__shop__for__mulher {
+
+        a {
+            text-decoration: none;
+            color: #fff;
+    }
+} 
+
+   .li__shop__for__homem {
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        }
+}
+}
+.headerBanner {
+    width: 100%;
+    height: 4.2em;
+    background-color: #0080eb;
+}
+}
