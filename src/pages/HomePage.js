@@ -1,7 +1,7 @@
 import React from 'react';
 import Directory from '../components/Directory';
 
-const Home = props => {
+const HomePage = props => {
     return (
         <section>
             <Directory />
@@ -9,4 +9,4 @@ const Home = props => {
     );
 };
 
-export default Home;
+export default HomePage;
