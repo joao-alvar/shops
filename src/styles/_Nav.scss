@@ -134,7 +134,7 @@ nav {
 .icon__list {
     list-style: none;
     display: flex;
-    gap: 2em;
+    gap: 3.2em;
 }
 }
 }
@@ -240,6 +240,95 @@ nav {
      .banner__shop__for__homem {
         margin-left: auto;
         margin-right: 4em;
+    }
+}
+}
+
+
+.tooltip__container {
+    position: relative;
+    display: inline-block;
+    font-size: 1.445em;
+    font-weight: 900;
+    font-family: $bannerStrongFont;
+    
+    &:hover .tooltip__links {
+        visibility: visible;
+    opacity: 1;
+
+    }
+
+    .tooltip__links { 
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s,visibility .4s;
+    transition-delay: .2s;
+    width: 15em;
+    height: 11.8em;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    padding: .8em;
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: -118%;
+    text-align: center;
+    margin-left: -60px;
+    z-index: 1000;
+
+    ul {
+        list-style: none;
+        color: #2D2D2D;
+
+        h3 {
+            color: #2d2d2d;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1em;
+        }
+
+        a {
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1em;
+        }
+
+        .sign__in__btn {
+            background-color: #2d2d2d;
+            border: 2px solid #2d2d2d;
+            margin-block-start: .7em;
+            margin-block-end: .7em;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+            color: #fff;
+            
+            }
+
+            .register__btn {
+                background-color: transparent;
+                border: 2px solid #999;
+                margin-block-start: .7em;
+                margin-block-end: .7em;
+                margin-inline-start: 0;
+                margin-inline-end: 0;
+                color: #2d2d2d;
+                }
+    }
+
+    &::after { 
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -14px;
+    border-width: 14px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
     }
 }
 }

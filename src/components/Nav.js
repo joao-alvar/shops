@@ -24,7 +24,15 @@ const Nav = props => {
             </div>
             <div className="nav__icons">
             <ul className="icon__list">
+            <div className="tooltip__container">
             <li><PersonOutlineIcon  style={{ fontSize: 29, cursor: "pointer" }} /></li>
+            <span class="tooltip__links">
+                <ul>
+                    <li><h3>minha conta</h3></li>
+                    <li><a href="#" className="sign__in__btn">sign in</a></li>
+                    <li><a href="#" className="register__btn">resgistre-se</a></li>
+                </ul>
+            </span></div>
             <li><LocalMallOutlinedIcon  style={{ fontSize: 27, cursor: "pointer"  }} /></li>
             </ul>
             </div>
