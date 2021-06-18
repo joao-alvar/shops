@@ -79,11 +79,18 @@ nav {
         
         .logo {
             font-size: 1.8em;
+            transition: opacity .8s ease;
+
             
             a {
             text-decoration: none;
             color: #fff;
             }
+            
+       &:hover {
+        opacity: .85;
+            
+        }
         }
     
     .nav__primary__ul {
@@ -178,10 +185,57 @@ nav {
     }
 
     .banner__shop__text {
+        position: relative;
+        display: inline-block;
         font-size: 1.445em;
         font-weight: 900;
         font-family: $bannerStrongFont;
+        
+        strong {
+            cursor: default;
+        }
+        
+        &:hover .hover__text {
+            visibility: visible;
+        opacity: 1;
+
+        }
+
+        .hover__text { 
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .4s,visibility .4s;
+        transition-delay: .2s;
+        width: 35em;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        color: #555;
+        padding: .8em;
+        box-shadow: 3px 3px rgb(175, 175, 175);
+        position: absolute;
+        z-index: 1;
+        top: 135%;
+        left: 0;
+        text-align: center;
+        margin-left: -60px;
+
+        p {
+            font-size: .770em;
+            font-family: $bannerFont;
+        }
+
+        &::after { 
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #eee transparent;
+        }
     }
+}
 
      .banner__shop__for__homem {
         margin-left: auto;

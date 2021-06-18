@@ -35,7 +35,12 @@ const Nav = props => {
            PROMOÇÂO: AGORA GANHE ATÉ 80% DE DESCONTO!
            <br/>
           &nbsp;A PROMOÇÂO DO SHOPS. ficou Ainda MAIOR
-           </strong></div>
+           </strong>
+           <span class="hover__text"><p>* Digite o código na finalização da compra no aplicativo para receber o desconto. 
+           Vários pedidos por cliente até o gasto máximo de pré-desconto de R$ 199,99 / R$ 299,99. 
+           Não pode ser usado com outros códigos promocionais ou em vouchers-presente, taxas de entrega, Premier Delivery ou Shops. Marketplace.
+            Alguns Produtos marcados são excluídos da promoção.</p></span>
+           </div>
            <div className="banner__shop__for__homem"><a href="#">Homem</a></div>
            </div>
            </div>

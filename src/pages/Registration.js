@@ -1,10 +1,11 @@
-import React, { components } from 'react';
+import React, { Component } from 'react';
 
-class Registration extends Componet {
+class Registration extends Component {
 
     render() {
         return (
             <div>
+            <h1>Registration</h1>
 
             </div>
         );
