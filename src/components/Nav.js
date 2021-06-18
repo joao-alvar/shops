@@ -10,13 +10,13 @@ const Nav = props => {
            <div className="headerRoom__wrap">
            <ul className="headerRoom__ul">
            <li><a href="#">Marketplace</a></li>
-           <li><a href="#" className="faq">Help & FAQs</a></li>
+           <li><a href="#" className="faq">Ajuda & FAQs</a></li>
            </ul>
            </div>
            </div>
             <nav>
             <div className="nav__main__links">
-            <div className="logo"><h2>Shops.</h2></div>
+            <div className="logo"><h2><a href="#">Shops.</a></h2></div>
             <ul className="nav__primary__ul">
             <li className="li__shop__for__mulher"><h3><a className="a__shop__for__mulher" href="#">Mulher</a></h3></li>
             <li className="li__shop__for__homem"><h3><a className="a__shop__for__homem" href="#">Homem</a></h3></li>
