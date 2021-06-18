@@ -34,8 +34,8 @@
 
         h2 {
             color: #000;
-            font-size: 4em;
-            font-weight: bold;
+            font-size: 5em;
+            font-weight: 800;
         }
 
         p {
@@ -84,24 +84,4 @@
 }
 }
 
-    .home__bottom__wrap {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        padding:2em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #f20;
-
-        .home__bottom__links {
-            margin-right: auto;
-            margin-left: 15%;
-        }
-
-        
-        .home__bottom__content {
-            margin-left: auto;
-            margin-right: 15%;
-        } 
-    }
+  

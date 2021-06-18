@@ -14,10 +14,6 @@ const Directory = props => {
             <a href="#"><span>Shops. Homens</span></a>
             </div>
             </div>
-                <div className="home__bottom__wrap">
-                <div className="home__bottom__links"><h2><a href="#">facil entrega para qualquer lugar</a></h2></div>
-                <div className="home__bottom__content"><h2>descubra mais de 150 marcas</h2></div>
-                </div>
             </div>
         </div>
     );
