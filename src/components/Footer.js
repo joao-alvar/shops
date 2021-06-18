@@ -33,7 +33,7 @@ const Footer = props => {
         </div>
         </div>
         <div className="footer__rights">
-            <div className="all__rights"><span><CopyrightIcon style={{ fontSize: 12 }} /> 2021 SHOPS.</span></div>
+            <div className="all__rights"><span><CopyrightIcon style={{ fontSize: 12, position: "absolute", left: 0, bottom: ".1em" }} /> 2021 SHOPS.</span></div>
             <div className="privacy__policy">
                 <ul>
                     <li><a href="/">Privacy & cookies</a></li>
