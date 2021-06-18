@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 
@@ -16,7 +17,7 @@ const Nav = props => {
            </div>
             <nav>
             <div className="nav__main__links">
-            <div className="logo"><h2><a href="#">Shops.</a></h2></div>
+            <div className="logo"><h2><a><Link to="/">Shops.</Link></a></h2></div>
             <ul className="nav__primary__ul">
             <li className="li__shop__for__mulher"><h3><a className="a__shop__for__mulher" href="#">Mulher</a></h3></li>
             <li className="li__shop__for__homem"><h3><a className="a__shop__for__homem" href="#">Homem</a></h3></li>
