@@ -39,7 +39,7 @@ const Nav = props => {
             </div>
             </nav>
            <div className="headerBanner">
-           <div className="banner__shop__for__mulher"><a href="/">Mulher</a></div>
+           <div className="banner__shop__for__mulher"><a href="/shopsmulheres">Mulher</a></div>
            <div className="banner__shop__text"><strong>
            PROMOÇÂO: AGORA GANHE ATÉ 80% DE DESCONTO!
            <br/>
@@ -50,7 +50,7 @@ const Nav = props => {
            Não pode ser usado com outros códigos promocionais ou em vouchers-presente, taxas de entrega, Premier Delivery ou Shops. Marketplace.
             Alguns Produtos marcados são excluídos da promoção.</p></span>
            </div>
-           <div className="banner__shop__for__homem"><a href="/">Homem</a></div>
+           <div className="banner__shop__for__homem"><a href="/shopshomens">Homem</a></div>
            </div>
            </div>
         </header>

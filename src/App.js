@@ -4,15 +4,15 @@ import { Switch, Route } from 'react-router-dom';
 // Theme Nav
 import MainNav from './Themes/MainNav';
 import SecondaryNav from './Themes/SecondaryNav';
-import NavSectionHomens from './Themes/NavSectionHomens';
 
 // Pages
 import HomePage from './pages/HomePage';
 import Registration from './pages/Registration';
 import ShopsMulheres from './pages/ShopsMulheres';
-import ShopsHomens from './pages/ShopsHomens';
 import Footer from './components/Footer';
 import './styles/main.scss';
+import NavSectionHomens from './Themes/NavSectionHomens';
+import ShopsHomens from './pages/ShopsHomens';
 
 function App() {
   return (

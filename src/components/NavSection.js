@@ -20,7 +20,7 @@ const NavSection = props => {
             <div className="logo"><h2><a><Link to="/">Shops.</Link></a></h2></div>
             <ul className="nav__primary__ul">
             <li className="li__shop__for__mulher"><h3><a className="a__shop__for__mulher active__section" href="/shopsmulheres">Mulher</a></h3></li>
-            <li className="li__shop__for__homem"><h3><a className="a__shop__for__homem" href="/">Homem</a></h3></li>
+            <li className="li__shop__for__homem"><h3><a className="a__shop__for__homem" href="/shopshomens">Homem</a></h3></li>
             </ul>
             </div>
             <div className="nav__icons">

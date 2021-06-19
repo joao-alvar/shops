@@ -10,8 +10,8 @@ const Directory = props => {
             <p>SHOPS. DESIGN e 150+ marcas</p>
             </div>
             <div className="home__button">
-            <a href="/"><span>Shops. Mulheres</span></a>
-            <a href="/"><span>Shops. Homens</span></a>
+            <a href="/shopsmulheres"><span>Shops. Mulheres</span></a>
+            <a href="/shopshomens"><span>Shops. Homens</span></a>
             </div>
             </div>
             </div>

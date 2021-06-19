@@ -11,7 +11,7 @@ const Footer = props => {
               <ul>
                   <li><a href="/">sobre nós</a></li>
                   <li><a href="/">garantia marketplace</a></li>
-                  <li><a href="/">fashion não fakes</a></li>
+                  <li><a href="/">como é trabalhar conosco</a></li>
               </ul>
           </div>
           <div class="footer__col__2"> 
@@ -36,7 +36,7 @@ const Footer = props => {
             <div className="privacy__policy">
                 <ul>
                     <li><a href="/">Privacidade & cookies</a></li>
-                    <li><a href="/">Ts&Cs</a></li>
+                    <li><a href="/">Acessibilidade</a></li>
                 </ul>
             </div>
         </div>

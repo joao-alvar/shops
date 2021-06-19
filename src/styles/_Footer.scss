@@ -49,6 +49,10 @@ $bannerFont: 'Didact Gothic', sans-serif;
             a {
                 text-decoration: none;
                 color: #666;
+
+                   &:hover {
+                        color: #0080eb;
+                    }
             }
         }
         }
