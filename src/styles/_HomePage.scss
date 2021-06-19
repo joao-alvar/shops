@@ -7,6 +7,10 @@
     background-position: center;
     position: relative;
 
+    @media (max-width: 830px) {
+        background-image: url(../images/homeBgMobile.jpg);
+    }
+
 
 
 .home__page__container {

@@ -1,0 +1,43 @@
+.active__section {
+    background-color: #4D4D4D;
+}
+
+.headerBannerShops {
+    width: 100%;
+    height: 5em;
+    background-color: #1d1d1d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    .shops__banner__text{
+        width: 50%;
+        height: 100%;
+        float: left;
+        background-color: #fff;
+        color: rgb(86, 17, 255);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.300em;
+        font-weight: bold;
+    }
+
+    .shops__banner__content{
+        width: 50%;
+        height: 100%;
+        float: right;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.300em;
+        font-weight: 900;
+    }
+
+}
