@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-
+import ShopsSectionHomens from '../components/ShopsSectionHomens';
 class ShopsHomens extends Component {
 
     render() {
         return (
-            <div>
-            
+            <div className="main">
+            <ShopsSectionHomens/>
 
             </div>
         );

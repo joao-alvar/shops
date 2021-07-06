@@ -22,6 +22,10 @@ html, body {
     line-height: 1.30769231;
 }
 
+.main {
+    height: 100%;
+}
 
-@import 'Nav', 'HomePage', 'Services', 'Footer', 'SecondaryNav';
+
+@import 'Nav', 'HomePage', 'Services', 'Footer', 'ShopsSection';
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
