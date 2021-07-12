@@ -15,7 +15,7 @@ const SignInSection = props => {
             <Link to="/registration" style={{ textDecoration: 'none', color: '#777' }} className="link"><h3>registre-se</h3></Link>
             </span>
             </div>
-            <div  style={{ borderBottom: '2px solid #000' }} className="sign__in"><h3>sign in</h3></div>
+            <div  style={{ borderBottom: '2px solid #000' }} className="sign__in"><h3>entrar</h3></div>
         </div>
         <form style={{ marginTop: '5%' }}>
         <label htmlFor="email">endereço de email:</label>

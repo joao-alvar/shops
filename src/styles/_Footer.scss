@@ -107,6 +107,11 @@ $bannerFont: 'Didact Gothic', sans-serif;
                     font-family: $bannerFont;
                     font-weight: 600;
                     font-size: 1.3em;
+
+                    &:hover {
+                        color: #0564b3;
+                    }
+                    
                 }
             }
         }

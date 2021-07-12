@@ -30,7 +30,7 @@ const NavActiveSection = props => {
             <span class="tooltip__links">
                 <ul>
                     <li><h3>minha conta</h3></li>
-                    <li><a href="/signin" className="sign__in__btn">sign in</a></li>
+                    <li><a href="/signin" className="sign__in__btn">entrar</a></li>
                     <li><a href="/registration" className="register__btn">resgistre-se</a></li>
                 </ul>
             </span></div>

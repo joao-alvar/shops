@@ -84,12 +84,6 @@ $bannerFont: 'Didact Gothic', sans-serif;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-
-                    .link {
-                        &:hover {
-                        opacity: .75;
-                    }
-                }
                 }
             }
             
@@ -155,4 +149,10 @@ $bannerFont: 'Didact Gothic', sans-serif;
         text-decoration: underline;
         opacity: .75;
     }
+}
+
+.link {
+    &:hover {
+    opacity: .75;
+}
 }
