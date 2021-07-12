@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
+import RegistrationSection from '../components/RegistrationSection';
 
 class Registration extends Component {
 
     render() {
         return (
-            <div>
-            <h1>Registration</h1>
-
-            </div>
+       <RegistrationSection />
         );
     }
 }
