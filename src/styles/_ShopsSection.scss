@@ -75,7 +75,6 @@ $bannerStrongFont: 'Hind', sans-serif;
 }
 
 .shops__banner {
-    width: 40%;
     height: 8em;
     background-color: #fff;
     display: flex;
@@ -87,6 +86,14 @@ $bannerStrongFont: 'Hind', sans-serif;
     .banner__content {
         font-size: 5.6em;
     }
+}
+
+.banner__md__section {
+    width: 42%;
+}
+
+.banner__content__section {
+    width: 40%;
 }
 
 .shops__banner__btn {
@@ -118,4 +125,10 @@ $bannerStrongFont: 'Hind', sans-serif;
         text-transform: uppercase;
         
     }
+}
+
+#products {
+    height: 50em;
+    width: 100%;
+    background-color: #000;
 }
