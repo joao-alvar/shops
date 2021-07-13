@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Directory = props => {
     return (
@@ -10,8 +11,8 @@ const Directory = props => {
             <p>SHOPS. DESIGN e 150+ marcas</p>
             </div>
             <div className="home__button">
-            <a href="/shopsmulheres"><span>Shops. Mulheres</span></a>
-            <a href="/shopshomens"><span>Shops. Homens</span></a>
+            <Link to="/shopsmulheres"><span>Shops. Mulheres</span></Link>
+            <Link to="/shopshomens"><span>Shops. Homens</span></Link>
             </div>
             </div>
             </div>

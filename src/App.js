@@ -8,7 +8,6 @@ import SecondaryNav from './Themes/SecondaryNav';
 // Pages
 import HomePage from './pages/HomePage';
 import Registration from './pages/Registration';
-import SingIn from './pages/SignIn';
 import ShopsMulheres from './pages/ShopsMulheres';
 import Footer from './components/Footer';
 import './styles/main.scss';

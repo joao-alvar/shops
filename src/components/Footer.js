@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CopyrightIcon from '@material-ui/icons/Copyright';
 
 const Footer = props => {
@@ -9,24 +10,24 @@ const Footer = props => {
           <div class="footer__col__1">
               <span><h2>sobre shops. marketplace</h2></span>
               <ul>
-                  <li><a href="/">sobre nós</a></li>
-                  <li><a href="/">garantia marketplace</a></li>
-                  <li><a href="/">como é trabalhar conosco</a></li>
+                  <li><Link to="/">sobre nós</Link></li>
+                  <li><Link to="/">garantia marketplace</Link></li>
+                  <li><Link to="/">como é trabalhar conosco</Link></li>
               </ul>
           </div>
           <div class="footer__col__2"> 
           <span><h2>ajuda & informação</h2></span>
               <ul>
-                  <li><a href="/">entrega</a></li>
-                  <li><a href="/">devolução</a></li>
-                  <li><a href="/">politica de copyright</a></li>
+                  <li><Link to="/">entrega</Link></li>
+                  <li><Link to="/">devolução</Link></li>
+                  <li><Link to="/">politica de copyright</Link></li>
               </ul>
               </div>
           <div class="footer__col__3">
           <span><h2>vendas</h2></span>
               <ul>
-                  <li><a href="/">abra uma boutique</a></li>
-                  <li><a href="/">ajuda com vendas</a></li>
+                  <li><Link to="/">abra uma boutique</Link></li>
+                  <li><Link to="/">ajuda com vendas</Link></li>
               </ul>
           </div>  
         </div>
@@ -35,8 +36,8 @@ const Footer = props => {
             <div className="all__rights"><span><CopyrightIcon style={{ fontSize: 12, position: "absolute", left: 0, bottom: ".1em" }} /> 2021 SHOPS.</span></div>
             <div className="privacy__policy">
                 <ul>
-                    <li><a href="/">Privacidade & cookies</a></li>
-                    <li><a href="/">Acessibilidade</a></li>
+                    <li><Link to="/">Privacidade & cookies</Link></li>
+                    <li><Link to="/">Acessibilidade</Link></li>
                 </ul>
             </div>
         </div>

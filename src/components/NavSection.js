@@ -10,17 +10,17 @@ const NavSection = props => {
            <div className="headerRoom">
            <div className="headerRoom__wrap">
            <ul className="headerRoom__ul">
-           <li><a href="/">Marketplace</a></li>
-           <li><a href="/" className="faq">Ajuda & FAQs</a></li>
+           <li><Link to="/">Marketplace</Link></li>
+           <li><Link to="/" className="faq">Ajuda & FAQs</Link></li>
            </ul>
            </div>
            </div>
             <nav>
             <div className="nav__main__links">
-            <div className="logo"><h2><a><Link to="/">Shops.</Link></a></h2></div>
+            <div className="logo"><h2><Link to="/">Shops.</Link></h2></div>
             <ul className="nav__primary__ul">
-            <li className="li__shop__for__mulher"><h3><a className="a__shop__for__mulher active__section" href="/shopsmulheres">Mulher</a></h3></li>
-            <li className="li__shop__for__homem"><h3><a className="a__shop__for__homem" href="/shopshomens">Homem</a></h3></li>
+            <li className="li__shop__for__mulher"><h3><Link className="a__shop__for__mulher active__section" to="/shopsmulheres">Mulher</Link></h3></li>
+            <li className="li__shop__for__homem"><h3><Link className="a__shop__for__homem" to="/shopshomens">Homem</Link></h3></li>
             </ul>
             </div>
             <div className="nav__icons">
@@ -30,8 +30,8 @@ const NavSection = props => {
             <span class="tooltip__links">
                 <ul>
                     <li><h3>minha conta</h3></li>
-                    <li><a href="/signin" className="sign__in__btn">entrar</a></li>
-                    <li><a href="/registration" className="register__btn">resgistre-se</a></li>
+                    <li><Link to="/signin" className="sign__in__btn">entrar</Link></li>
+                    <li><Link to="/registration" className="register__btn">resgistre-se</Link></li>
                 </ul>
             </span></div>
             <li><LocalMallOutlinedIcon  style={{ fontSize: 27, cursor: "pointer"  }} /></li>
