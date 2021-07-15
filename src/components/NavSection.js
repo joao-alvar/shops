@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
+import SearchIcon from '@material-ui/icons/Search';
 
 const NavSection = props => {
     return (
@@ -22,6 +23,12 @@ const NavSection = props => {
             <li className="li__shop__for__mulher"><h3><Link className="a__shop__for__mulher active__section" to="/shopsmulheres">Mulher</Link></h3></li>
             <li className="li__shop__for__homem"><h3><Link className="a__shop__for__homem" to="/shopshomens">Homem</Link></h3></li>
             </ul>
+            </div>
+            <div className="search__bar__container">
+            <form>
+            <input type="search" placeholder="pesquisar por items" className="search__bar" required></input>
+            <button type="submit" className="search__bar__btn"><SearchIcon  style={{ fontSize: 20, cursor: "pointer", color: "#2d2d2d" }} /></button>
+            </form>
             </div>
             <div className="nav__icons">
             <ul className="icon__list">

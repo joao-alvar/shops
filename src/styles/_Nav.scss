@@ -361,6 +361,11 @@ nav {
         outline: none;
         border: none;
         border-radius: 40px;
+
+        &::-webkit-search-cancel-button{
+            margin-right: 6.2%;
+            font-size: 1.23em;
+        }
     }
 }
 
