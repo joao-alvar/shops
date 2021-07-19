@@ -1,0 +1,40 @@
+  .service__wrap { 
+        width: 100%;
+        height: auto;
+        position: relative;
+      
+  .home__bottom__wrap {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2d2d2d;
+
+        .home__bottom__links {
+            margin-right: auto;
+            margin-left: 15%;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+
+        
+        .home__bottom__content {
+            margin-left: auto;
+            margin-right: 15%;
+        } 
+
+        h2 {
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.250em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+    }
+    }
