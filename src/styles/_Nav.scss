@@ -362,6 +362,10 @@ nav {
         border: none;
         border-radius: 40px;
 
+        &:focus {
+            box-shadow: 0 0 3pt 2pt #0080eb;
+        }
+
         &::-webkit-search-cancel-button{
             margin-right: 6.2%;
             font-size: 1.23em;
