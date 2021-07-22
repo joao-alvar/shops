@@ -47,6 +47,7 @@ $bannerFont: 'Didact Gothic', sans-serif;
             align-items: center;
             justify-content: center;
             position: relative;
+            flex-direction: column;
 
             .registration__links {
                 position: absolute;
@@ -138,7 +139,7 @@ $bannerFont: 'Didact Gothic', sans-serif;
 .esqueceu__password {
     font-size: 1.250em;
     font-weight: 100;
-    margin-top: 2%;
+    margin-top: 1%;
     font-family: $bannerFont;
     text-decoration: none;
     color: #1d1d1d;
@@ -154,4 +155,45 @@ $bannerFont: 'Didact Gothic', sans-serif;
     &:hover {
     opacity: .75;
 }
+}
+
+.google__register {
+    margin-top: 15%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2em;
+
+    .google__btn {
+        width: 32%;
+        height: 4.3em;
+        border: 2px solid #ccc;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .google__btn__text {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-left: 10%;
+        }
+
+    .google__btn__logo {
+        position: absolute;
+        background-image: url(../images/google-logo.png);
+        background-size: cover;
+        width: 23px;
+        height: 23px;
+        left: 10%;
+    }
+    }
+}
+
+.register__text {
+  
 }

@@ -12,7 +12,7 @@ const RegistrationSection = props => {
         <div className="registration__links">
             <div style={{ borderBottom: '2px solid #000' }} className="registre__se">
             <span className="registre__se__wrap">
-            <h3>registre-se</h3>
+            <h3>registrar</h3>
             </span>
             </div>
             <div className="sign__in"><Link to="/signin" style={{ textDecoration: 'none', color: '#777' }} className="link"><h3>entrar</h3></Link></div>
