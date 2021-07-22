@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from './Button';
+import { signInWithGoogle } from './../firebase/utils'
 
 const SignInSection = props => {
     return (
@@ -19,11 +21,11 @@ const SignInSection = props => {
         </div>
         <div className="google__register">
             <h2>ENTRE COM...</h2>
-            <div className="google__btn">
+            <Button onClick={signInWithGoogle}>
             <div className="google__btn__logo">
             </div>
             <span className="google__btn__text">google</span>
-            </div>
+            </Button>
         <div className="register__text">
             <h2>OU ENTRE COM O E-MAIL</h2>
             </div>
