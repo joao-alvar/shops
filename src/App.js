@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { auth } from './firebase/utils';
 
 // Theme Nav
 import MainNav from './Themes/MainNav';
@@ -15,7 +16,9 @@ import NavSectionHomens from './Themes/NavSectionHomens';
 import ShopsHomens from './pages/ShopsHomens';
 import SignIn from './pages/SignIn';
 
-function App() {
+class App extends Component {
+
+  render() { 
   return (
     <div className="App">
   
@@ -43,6 +46,7 @@ function App() {
    </Switch>
     </div>
   );
+}
 }
 
 export default App;
