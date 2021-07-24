@@ -1,15 +1,52 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ButtonGoogle from './ButtonGoogle';
+import { signInWithGoogle, auth } from './../firebase/utils'
+
+import FormInput from './FormInput';
 import Button from './Button';
-import { signInWithGoogle } from './../firebase/utils'
+
+const initialState = {
+    email: '',
+    password: ''
+};
 
 class SignInSection extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            ...initialState
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e) {
+        const { name, value } = e.target;
+        this.setState({
+            [name]: value
+        });
+    }
 
     handleSubmit = async e => {
         e.preventDefault();
+        const { email, password } = this.state;
+
+        try {
+
+            await auth.signInWithEmailAndPassword(email, password);
+            this.state({
+                ...initialState
+            });
+            
+        } catch(err) {
+            // console.log(err);
+        }
     }
     
     render() {
+        const { email, password } = this.state;
+
         return (
             <section className="registration" style={{ position: 'fixed' }}>
             <div className="registration__container">
@@ -28,21 +65,39 @@ class SignInSection extends Component {
             <form onSubmit={this.handleSubmit} style={{ marginTop: '5%' }}>
             <div className="google__register">
                 <h2>ENTRE COM...</h2>
-                <Button onClick={signInWithGoogle}>
+                <ButtonGoogle onClick={signInWithGoogle}>
                 <div className="google__btn__logo">
                 </div>
                 <span className="google__btn__text">google</span>
-                </Button>
+                </ButtonGoogle>
             <div className="register__text">
                 <h2>OU ENTRE COM O E-MAIL</h2>
                 </div>
                 </div>
-            <label htmlFor="email">endereço de email:</label>
+                <label htmlFor="email">endereço de email:</label>
+                <FormInput
+                type="email"
+                name="email"
+                value={email}
+                required
+                onChange={this.handleChange}
+                />
+                <label htmlFor="password">senha:</label>
+                 <FormInput
+                type="password"
+                name="password"
+                value={password}
+                required 
+                onChange={this.handleChange}
+                />
+                <Button type="submit">entrar</Button>
+                <Link className="esqueceu__password"><h3>Esqueceu a senha?</h3></Link>
+            {/* <label htmlFor="email">endereço de email:</label>
                 <input type="email" required/>
             <label htmlFor="password">senha:</label>
                 <input type="password" required/>
-                <button type="submit" className="btn__registre__se">entrar</button>
-                <Link className="esqueceu__password"><h3>Esqueceu a senha?</h3></Link>
+                <Button type="submit">entrar</Button>
+                 */}
             </form>
             </div>
             </div>
