@@ -83,6 +83,7 @@ class RegistrationSection extends Component {
                 type="text"
                 name="displayName"
                 value={displayName} 
+                required
                 onChange={this.handleChange}
                 />
             <label htmlFor="email">endereço de email:</label>
@@ -90,6 +91,7 @@ class RegistrationSection extends Component {
                 type="email"
                 name="email"
                 value={email} 
+                required
                 onChange={this.handleChange}
                 />
             <label htmlFor="password">senha:</label>
@@ -97,6 +99,7 @@ class RegistrationSection extends Component {
                 type="password"
                 name="password"
                 value={password} 
+                required
                 onChange={this.handleChange}
                 />
             <label htmlFor="password">confirme a senha:</label>        
@@ -104,8 +107,8 @@ class RegistrationSection extends Component {
                 type="password"
                 name="confirmPassword"
                 value={confirmPassword} 
-                onChange={this.handleChange}
                 required
+                onChange={this.handleChange}
                 />
                 {errors.length > 0 && (
                 <ul className="inputError">

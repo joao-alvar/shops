@@ -62,7 +62,6 @@ class SignInSection extends Component {
                 </div>
                 <div  style={{ borderBottom: '2px solid #000' }} className="sign__in"><h3>entrar</h3></div>
             </div>
-            <form onSubmit={this.handleSubmit} style={{ marginTop: '5%' }}>
             <div className="google__register">
                 <h2>ENTRE COM...</h2>
                 <ButtonGoogle onClick={signInWithGoogle}>
@@ -74,6 +73,8 @@ class SignInSection extends Component {
                 <h2>OU ENTRE COM O E-MAIL</h2>
                 </div>
                 </div>
+            <form onSubmit={this.handleSubmit} style={{ marginTop: '5%' }}>
+           
                 <label htmlFor="email">endereço de email:</label>
                 <FormInput
                 type="email"
@@ -87,7 +88,7 @@ class SignInSection extends Component {
                 type="password"
                 name="password"
                 value={password}
-                required 
+                required
                 onChange={this.handleChange}
                 />
                 <Button type="submit">entrar</Button>
