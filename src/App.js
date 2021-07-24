@@ -15,6 +15,7 @@ import './styles/main.scss';
 import NavSectionHomens from './Themes/NavSectionHomens';
 import ShopsHomens from './pages/ShopsHomens';
 import SignIn from './pages/SignIn';
+import RecuperarSenha from './pages/RecuperarSenha';
 
 const initialState = {
   currentUser: null
@@ -86,6 +87,9 @@ class App extends Component {
        <ShopsHomens />
        <Footer />
      </NavSectionHomens> 
+     )} />
+     <Route path="/recuperarconta" render={() => currentUser ? <Redirect to="/" /> : (
+       <RecuperarSenha />
      )} />
    </Switch>
     </div>

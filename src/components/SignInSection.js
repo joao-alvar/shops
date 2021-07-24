@@ -92,7 +92,7 @@ class SignInSection extends Component {
                 onChange={this.handleChange}
                 />
                 <Button type="submit">entrar</Button>
-                <Link className="esqueceu__password"><h3>Esqueceu a senha?</h3></Link>
+                <Link to="recuperarconta" className="esqueceu__password"><h3>Esqueceu a senha?</h3></Link>
             {/* <label htmlFor="email">endereço de email:</label>
                 <input type="email" required/>
             <label htmlFor="password">senha:</label>

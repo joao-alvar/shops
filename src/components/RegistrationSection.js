@@ -117,7 +117,7 @@ class RegistrationSection extends Component {
                     <li key={index}>
                         {err}
                     </li>
-                )
+                );
             })}
             </ul>
             )}
