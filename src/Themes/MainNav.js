@@ -4,7 +4,7 @@ import Nav from '../components/Nav';
 const MainNav = props => {
     return (
         <div>
-            <Nav />
+            <Nav {...props} />
             {props.children}
         </div>
     );

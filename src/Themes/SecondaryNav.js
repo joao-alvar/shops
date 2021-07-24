@@ -5,7 +5,7 @@ const SecondaryNav = props => {
     return (
 
         <div>
-            <NavSection />
+            <NavSection {...props} />
             {props.children}
         </div>
     );

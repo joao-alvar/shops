@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { auth } from './firebase/utils';
 
 // Theme Nav
@@ -16,29 +16,66 @@ import NavSectionHomens from './Themes/NavSectionHomens';
 import ShopsHomens from './pages/ShopsHomens';
 import SignIn from './pages/SignIn';
 
+const initialState = {
+  currentUser: null
+};
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ...initialState
+    };
+  }
+
+  authListener = null;
+
+  componentDidMount() {
+    this.authListener = auth.onAuthStateChanged(userAuth => {
+      if (!userAuth) {
+        this.setState({
+          ...initialState
+        })
+      };
+
+      this.setState({
+        currentUser: userAuth
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    this.authListener();
+  }
 
   render() { 
+    const { currentUser } = this.state;
   return (
     <div className="App">
   
     <Switch>
    <Route exact path="/" render={() => (
-     <MainNav>
+     <MainNav currentUser={currentUser}>
        <HomePage />
        <Footer />
      </MainNav>
    )} />
-   <Route path="/registration" component={Registration} />
-   <Route path="/signin" component={SignIn} />
+   <Route path="/registration" render={() => currentUser ? <Redirect to="/" /> : (
+     <Registration />
+   )}
+   
+   />
+   <Route path="/signin" render={() => currentUser ? <Redirect to="/" /> : (
+     <SignIn />
+   )} />
    <Route path="/shopsmulheres" render={() => (
-     <SecondaryNav>
+     <SecondaryNav currentUser={currentUser}>
        <ShopsMulheres />
        <Footer />
      </SecondaryNav> 
      )} />
        <Route path="/shopshomens" render={() => (
-     <NavSectionHomens>
+     <NavSectionHomens currentUser={currentUser}>
        <ShopsHomens />
        <Footer />
      </NavSectionHomens> 

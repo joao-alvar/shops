@@ -5,7 +5,7 @@ const NavSectionHomens = props => {
     return (
 
         <div>
-            <NavActiveSection />
+            <NavActiveSection {...props} />
             {props.children}
         </div>
     );

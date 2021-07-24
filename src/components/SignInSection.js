@@ -8,6 +8,7 @@ class SignInSection extends Component {
     handleSubmit = async e => {
         e.preventDefault();
     }
+    
     render() {
         return (
             <section className="registration" style={{ position: 'fixed' }}>

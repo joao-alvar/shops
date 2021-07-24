@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import SearchIcon from '@material-ui/icons/Search';
+import { auth } from '../firebase/utils';
 
 const NavActiveSection = props => {
+    const { currentUser } = props;
     return (
         <header>
         <div className="headerContainer">
@@ -35,11 +37,21 @@ const NavActiveSection = props => {
             <div className="tooltip__container">
             <li><PersonOutlineIcon  style={{ fontSize: 29, cursor: "pointer" }} /></li>
             <span class="tooltip__links">
+            {!currentUser && (
                 <ul>
                     <li><h3>minha conta</h3></li>
                     <li><Link to="/signin" className="sign__in__btn">entrar</Link></li>
                     <li><Link to="/registration" className="register__btn">resgistre-se</Link></li>
                 </ul>
+                    )}
+
+            {currentUser && (
+                 <ul className="loged__ul">
+                  <li><h3>minha conta</h3></li>
+                  <li><Link className="sign__in__btn">meus pedidos</Link></li>
+                  <li onClick={() =>  auth.signOut()}><Link className="register__btn">sair</Link></li>
+                  </ul>
+                   )}
             </span></div>
             <li><LocalMallOutlinedIcon  style={{ fontSize: 27, cursor: "pointer"  }} /></li>
             </ul>

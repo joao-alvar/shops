@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import SearchIcon from '@material-ui/icons/Search';
+import { auth } from '../firebase/utils';
 
 const NavSection = props => {
+    const { currentUser } = props;
     return (
         <header>
         <div className="headerContainer">
@@ -12,7 +14,7 @@ const NavSection = props => {
            <div className="headerRoom__wrap">
            <ul className="headerRoom__ul">
            <li><Link to="/">Marketplace</Link></li>
-           <li><Link to="/" className="faq">Ajuda & FAQs</Link></li>
+           <li><Link to="/" className="faq">Ajuda &#x26; FAQs</Link></li>
            </ul>
            </div>
            </div>
@@ -34,12 +36,23 @@ const NavSection = props => {
             <ul className="icon__list">
             <div className="tooltip__container">
             <li><PersonOutlineIcon  style={{ fontSize: 29, cursor: "pointer" }} /></li>
-            <span class="tooltip__links">
+            <span className="tooltip__links">
+            {!currentUser && (
                 <ul>
                     <li><h3>minha conta</h3></li>
                     <li><Link to="/signin" className="sign__in__btn">entrar</Link></li>
                     <li><Link to="/registration" className="register__btn">resgistre-se</Link></li>
                 </ul>
+                    )}
+
+            {currentUser && (
+                 <ul className="loged__ul">
+                  <li><h3>minha conta</h3></li>
+                  <li><Link className="sign__in__btn">meus pedidos</Link></li>
+                  <li onClick={() =>  auth.signOut()}><Link className="register__btn">sair</Link></li>
+                  </ul>
+                   )}
+
             </span></div>
             <li><LocalMallOutlinedIcon  style={{ fontSize: 27, cursor: "pointer"  }} /></li>
             </ul>
@@ -61,6 +74,10 @@ const NavSection = props => {
            </div>
         </header>
     );
+};
+
+NavSection.defaultProps = {
+    currentUser: null
 };
 
 export default NavSection;
