@@ -36,7 +36,7 @@ const Footer = props => {
             <div className="all__rights"><span><CopyrightIcon style={{ fontSize: 12, position: "absolute", left: 0, bottom: ".1em" }} /> 2021 SHOPS.</span></div>
             <div className="privacy__policy">
                 <ul>
-                    <li><Link to="/">Privacidade & cookies</Link></li>
+                    <li><Link to="/">Privacidade &#x26; cookies</Link></li>
                     <li><Link to="/">Acessibilidade</Link></li>
                 </ul>
             </div>

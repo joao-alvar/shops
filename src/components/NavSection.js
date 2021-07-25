@@ -28,9 +28,9 @@ const NavSection = props => {
             </ul>
             </div>
             <div className="search__bar__container">
-            <form>
-            <input type="search" placeholder="pesquisar por items" className="search__bar" required></input>
-            <button type="submit" className="search__bar__btn"><SearchIcon  style={{ fontSize: 20, cursor: "pointer", color: "#2d2d2d" }} /></button>
+            <form className="searchForm">
+            <input type="search" placeholder="pesquisar por produtos" className="search__bar" required></input>
+            <button type="submit" className="search__bar__btn"><SearchIcon  style={{ fontSize: 20, cursor: "pointer" }} /></button>
             </form>
             </div>
             <div className="nav__icons">
