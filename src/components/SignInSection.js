@@ -37,7 +37,7 @@ class SignInSection extends Component {
 
             await auth.signInWithEmailAndPassword(email, password)
             .catch(() => {
-                const err = ['E-mail ou senha incorreto, tente novamente.'];
+                const err = ['Parece que seu endereço de e-mail ou senha estavam incorretos. Quer tentar de novo?'];
                 this.setState({
                     errors: err
                 });
