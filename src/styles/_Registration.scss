@@ -139,7 +139,7 @@ $bannerFont: 'Didact Gothic', sans-serif;
 .esqueceu__password {
     font-size: 1.250em;
     font-weight: 100;
-    margin-top: 1%;
+    margin-top: -2%;
     font-family: $bannerFont;
     text-decoration: none;
     color: #1d1d1d;
@@ -205,10 +205,6 @@ $bannerFont: 'Didact Gothic', sans-serif;
         left: 10%;
     }
     }
-}
-
-.register__text {
-  
 }
 
 .formInputWrap {

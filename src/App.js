@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { auth, handleUserProfile } from './firebase/utils';
+import { setCurrentUser } from './redux/User/user.actions';
 
 // Theme Nav
 import MainNav from './Themes/MainNav';
@@ -17,38 +19,24 @@ import ShopsHomens from './pages/ShopsHomens';
 import SignIn from './pages/SignIn';
 import RecuperarSenha from './pages/RecuperarSenha';
 
-const initialState = {
-  currentUser: null
-};
-
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      ...initialState
-    };
-  }
-
-  authListener = null;
+    authListener = null;
 
   componentDidMount() {
+    const { setCurrentUser } = this.props;
+
     this.authListener = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await handleUserProfile(userAuth);
         userRef.onSnapshot(snapshot => {
-          this.setState({
-            currentUser: {
+          setCurrentUser({
               id: snapshot.id,
               ...snapshot.data()
-            }
           })
         })
       }
 
-      this.setState({
-        ...initialState
-      })
-
+      setCurrentUser(userAuth);
         });
   }
 
@@ -57,13 +45,13 @@ class App extends Component {
   }
 
   render() { 
-    const { currentUser } = this.state;
+    const { currentUser } = this.props;
   return (
     <div className="App">
   
     <Switch>
    <Route exact path="/" render={() => (
-     <MainNav currentUser={currentUser}>
+     <MainNav>
        <HomePage />
        <Footer />
      </MainNav>
@@ -77,13 +65,13 @@ class App extends Component {
      <SignIn />
    )} />
    <Route path="/shopsmulheres" render={() => (
-     <SecondaryNav currentUser={currentUser}>
+     <SecondaryNav>
        <ShopsMulheres />
        <Footer />
      </SecondaryNav> 
      )} />
        <Route path="/shopshomens" render={() => (
-     <NavSectionHomens currentUser={currentUser}>
+     <NavSectionHomens>
        <ShopsHomens />
        <Footer />
      </NavSectionHomens> 
@@ -97,4 +85,12 @@ class App extends Component {
 }
 }
 
-export default App;
+const mapStateToProps = ({ user }) => ({
+  currentUser: user.currentUser
+})
+
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user)) 
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

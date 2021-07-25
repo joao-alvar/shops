@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
@@ -75,4 +76,11 @@ const Nav = props => {
     );
 };
 
-export default Nav;
+Nav.defaultProps = {
+    currentUser: null
+};
+
+const mapStateToprops = ({ user }) => ({
+    currentUser: user.currentUser
+})
+export default connect(mapStateToprops, null)(Nav);
