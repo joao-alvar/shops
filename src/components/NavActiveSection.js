@@ -30,7 +30,7 @@ const NavActiveSection = props => {
             <div className="search__bar__container">
             <form className="searchForm">
             <input type="search" placeholder="pesquisar por produtos" className="search__bar" required></input>
-            <button type="submit" className="search__bar__btn"><SearchIcon  style={{ fontSize: 20, cursor: "pointer" }} /></button>
+            <button type="submit" className="search__bar__btn"><SearchIcon  style={{ fontSize: 20, cursor: "pointer" }} className="search__bar__btn__icon"  /></button>
             </form>
             </div>
             <div className="nav__icons">
