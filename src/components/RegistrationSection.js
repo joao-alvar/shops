@@ -36,7 +36,7 @@ class RegistrationSection extends Component {
         const { displayName, email, password, confirmPassword } = this.state;
 
         if (password !== confirmPassword) {
-            const err = ['Senha diferente'];
+            const err = ['Confirme a Senha.'];
             this.setState({
                 errors: err
             });
