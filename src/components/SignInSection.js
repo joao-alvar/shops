@@ -8,7 +8,8 @@ import Button from './Button';
 
 const initialState = {
     email: '',
-    password: ''
+    password: '',
+    errors: []
 };
 
 class SignInSection extends Component {
@@ -34,7 +35,13 @@ class SignInSection extends Component {
 
         try {
 
-            await auth.signInWithEmailAndPassword(email, password);
+            await auth.signInWithEmailAndPassword(email, password)
+            .catch(() => {
+                const err = ['E-mail ou senha incorreto, tente novamente.'];
+                this.setState({
+                    errors: err
+                });
+            });
             this.state({
                 ...initialState
             });
@@ -45,7 +52,7 @@ class SignInSection extends Component {
     }
     
     render() {
-        const { email, password } = this.state;
+        const { email, password, errors } = this.state;
 
         return (
             <section className="registration" style={{ position: 'fixed' }}>
@@ -73,6 +80,19 @@ class SignInSection extends Component {
                 <h2>OU ENTRE COM O E-MAIL</h2>
                 </div>
                 </div>
+
+                {errors.length > 0 && (
+                <ul className="inputError">
+            {errors.map((e, index) => {
+                return (
+                    <li key={index}>
+                        {e}
+                    </li>
+                );
+            })}
+            </ul>
+            )}
+
             <form onSubmit={this.handleSubmit} style={{ marginTop: '5%' }}>
            
                 <label htmlFor="email">endereço de email:</label>
