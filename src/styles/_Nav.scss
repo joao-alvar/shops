@@ -369,6 +369,7 @@ nav {
         &::-webkit-search-cancel-button{
             margin-right: 7.5%;
             font-size: 1.23em;
+            cursor: pointer;
         }
     }
 }
@@ -377,12 +378,13 @@ nav {
     position: absolute;
     outline: none;
     border: none;
-    border-radius: 40px;
+    border-radius: 50%;
     width: 4.7%;
-    height: 60%;
+    height: 63.340%;
     background-color: transparent;
-    right: 5.1%;
+    right: 5.05%;
     padding-top: .5%;
+    pointer-events: none;
 }
 
 
@@ -394,12 +396,18 @@ nav {
 
 .searchForm:valid .search__bar__btn {
     background-color: #0770cf;
+    cursor: pointer;
+    pointer-events: visible;
     
     &:active {
         box-shadow: 0 0 3pt 2pt #0080eb;
         border: 2px solid #fff;
     }
 }
+
+.searchForm:valid .search__bar {
+    box-shadow: 0 0 3pt 2pt #0080eb;
+} 
 
 .search__bar__btn__icon {
     color: #2d2d2d;
