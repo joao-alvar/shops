@@ -4,6 +4,8 @@ import productMen from '../images/productMen.jpg';
 import productMen2 from '../images/productMen2.jpg';
 import productMen3 from '../images/productMen3.jpg';
 import productMen4 from '../images/productMen4.jpg';
+import productMen5 from '../images/productMen5.jpg';
+import productMen6 from '../images/productMen6.jpg';
 import { Link } from "react-router-dom";
 
 const ShopsSectionHomens = props => {
@@ -84,7 +86,7 @@ const ShopsSectionHomens = props => {
                     <Link to="" className="product__list__link">
                     <div className="product__list__show__wrap">
                         <div className="product__show__img">
-                            <img src={productMen} alt="" className="product__list__img"></img>
+                            <img src={productMen5} alt="" className="product__list__img"></img>
                         </div>
                         <div className="product__list__title">
                             <h2 className="product__list__h2">Novos conjuntos</h2>
@@ -102,7 +104,7 @@ const ShopsSectionHomens = props => {
                     <Link to="" className="product__list__link">
                     <div className="product__list__show__wrap">
                         <div className="product__show__img">
-                            <img src={productMen2} alt="" className="product__list__img"></img>
+                            <img src={productMen6} alt="" className="product__list__img"></img>
                         </div>
                         <div className="product__list__title">
                             <h2 className="product__list__h2">Novos conjuntos</h2>
