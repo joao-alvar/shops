@@ -91,7 +91,7 @@ const ShopsSectionHomens = props => {
                             <p className="product__list__p">Sua cara-metade</p>
                             <div className="product__show__btn">
                                 <span className="product__show__btn__span">
-                                    shop now
+                                compre agora
                                 </span>
                             </div>
                             </div>
@@ -109,7 +109,7 @@ const ShopsSectionHomens = props => {
                             <p className="product__list__p">Sua cara-metade</p>
                             <div className="product__show__btn">
                                 <span className="product__show__btn__span">
-                                    shop now
+                                compre agora
                                 </span>
                             </div>
                             </div>
