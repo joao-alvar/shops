@@ -77,6 +77,48 @@ const ShopsSectionMulheres = props => {
             </ul>
             </div>
         </section>
+        <section className="products__show__section">
+        <div className="products__show__container">
+        <ul className="product__show__ul">
+                <li className="product__show__list">
+                    <Link to="" className="product__list__link">
+                    <div className="product__list__show__wrap">
+                        <div className="product__show__img">
+                            <img src={productWomen} alt="" className="product__list__img"></img>
+                        </div>
+                        <div className="product__list__title">
+                            <h2 className="product__list__h2">Novos conjuntos</h2>
+                            <p className="product__list__p">Sua cara-metade</p>
+                            <div className="product__show__btn">
+                                <span className="product__show__btn__span">
+                                    shop now
+                                </span>
+                            </div>
+                            </div>
+                    </div>
+                    </Link>
+                </li>
+                <li className="product__show__list">
+                    <Link to="" className="product__list__link">
+                    <div className="product__list__show__wrap">
+                        <div className="product__show__img">
+                            <img src={productWomen2} alt="" className="product__list__img"></img>
+                        </div>
+                        <div className="product__list__title">
+                            <h2 className="product__list__h2">Novos conjuntos</h2>
+                            <p className="product__list__p">Sua cara-metade</p>
+                            <div className="product__show__btn">
+                                <span className="product__show__btn__span">
+                                    shop now
+                                </span>
+                            </div>
+                            </div>
+                    </div>
+                    </Link>
+                </li>
+            </ul>
+        </div>
+        </section>
         </>
     );
 };

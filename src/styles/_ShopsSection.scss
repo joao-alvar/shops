@@ -126,7 +126,7 @@ $bannerStrongFont: "Hind", sans-serif;
 }
 
 #products {
-  height: 70em;
+  height: 60em;
   width: 100%;
   background-color: #eee;
 
@@ -140,6 +140,7 @@ $bannerStrongFont: "Hind", sans-serif;
   .product__list__ul {
     list-style: none;
     width: 100%;
+    height: 85%;
 
     .product__list {
       display: inline-block;
@@ -191,6 +192,101 @@ $bannerStrongFont: "Hind", sans-serif;
 }
 }
 
-.img__product__3 {
+.products__show__section {
+    width: 100%;
+    height: 100em;
     
+    .products__show__container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+            
+  .product__show__ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 85%;
+    gap: 4%;
+
+    .product__show__list {
+        &:first-child {
+            padding-left: 10.5%;
+        }
+        
+    }
+
+    .product__list__link {
+        text-decoration: none;
+    }
+    .product__list__show__wrap {
+      width: 48.5em;
+      height: 80em;
+      .product__show__img {
+          width: 100%;
+          height: 83%;
+        .product__list__img {
+           width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .product__list__title {
+        width: 100%;
+        height: 17%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-decoration: none;
+        gap: 1.2em;
+
+        .product__list__h2 {
+            color: #000;
+            font-size: 2.6em;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding-top: 6%;
+            
+        }
+
+        .product__list__p {
+            color: #000000;
+            font-size: 1.5em;
+            font-weight: 400;
+            
+        }
+        
+        .product__show__btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .product__show__btn__span {
+                width: 40%;
+                height: 3em;
+                background-color: transparent;
+                cursor: pointer;
+                border: 2px solid #000;
+                color: #000;
+                transition: 800ms;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2em;
+                text-transform: uppercase;
+                font-weight: 700;
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+  }
+    }
 }
