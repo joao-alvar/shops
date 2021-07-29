@@ -1,231 +1,263 @@
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
-$bannerFont: 'Didact Gothic', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
+$bannerFont: "Didact Gothic", sans-serif;
 
 .registration {
+  position: absolute;
+  width: 100%;
+  background-color: #eee;
+
+  .registration__container {
     height: 100%;
     width: 100%;
-    background-color: #eee;
-    position: fixed;
+    position: relative;
 
-    .registration__container {
-        height: 100%;
-        width: 100%;
+    .title__container {
+      padding-top: 4%;
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      margin-block-end: 1%;
+
+      Link {
+        text-decoration: none;
+      }
+
+      .registration__title {
+        color: #000;
+        text-transform: uppercase;
+        font-size: 2.95em;
+        font-family: $bannerFont;
+        font-weight: 900;
+        text-decoration: none;
+      }
+    }
+
+    .registration__wrap {
+      height: 54em;
+      width: 50%;
+      margin-top: 5%;
+      background-color: #fff;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-direction: column;
+
+      .registration__links {
+        position: absolute;
+        top: 0;
+        width: 93%;
+        height: 17%;
+        padding-top: 5%;
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
+        font-size: 1.26em;
+        border-bottom: 1px solid rgb(232, 233, 233);
+        text-transform: uppercase;
 
-        .title__container {
-            position: absolute;
-            top: 5%;
-            width: 50%;
-            height: 5em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            Link {
-                text-decoration: none;
-            }
-
-            .registration__title {
-                color: #000;
-                text-transform: uppercase;
-                font-size: 2.950em;
-                font-family: $bannerFont;
-                font-weight: 900;
-                text-decoration: none;
-            }
+        .registre__se__wrap {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          border-right: 1px solid #777;
         }
 
-        .registration__wrap {
-            height: 80%;
-            width: 50%;
-            margin-top: 5%;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            flex-direction: column;
-
-            .registration__links {
-                position: absolute;
-                top: 0;
-                width: 93%;
-                height: 17%;
-                padding-top: 5%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 1.260em;
-                border-bottom: 1px solid rgb(232, 233, 233);
-                text-transform: uppercase;
-
-                .registre__se__wrap {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    border-right: 1px solid #777;
-                }
-                
-                .registre__se {
-                    width: 50%;
-                    height: 100%;
-                    float: left;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                
-                .sign__in {
-                    width: 50%;
-                    height: 100%;
-                    float: right;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-            }
-            
-            form {
-                display: flex;
-                flex-direction: column;
-                gap: 2em;
-                width: 100%;
-                justify-content: center;
-                align-items: center;
-                
-                input {
-                    padding-left: .2em;
-                    width: 50%;
-                    padding: .830em;
-                    outline: none;
-                    border: 1px solid #999;
-                }
-                
-                label {
-                    text-transform: uppercase;
-                    font-size: 1.4em;
-                    margin-right: auto;
-                    margin-left: 25%;
-                    margin-bottom: -1em;
-                    font-weight: 800;
-                    color: #777;
-
-                }
-                
-                .btn__registre__se {
-                    padding: 1.2em;
-                    width: 50%;
-                    outline: none;
-                    border: none;
-                    cursor: pointer;
-                    background-color: #2d2d2d;
-                    color: #fff;
-                    font-size: 1.2em;
-                    font-weight: 700;
-                    text-transform: uppercase;
-
-                    &:hover {
-                        opacity: .8;
-                    }
-                }
-            }
+        .registre__se {
+          width: 50%;
+          height: 100%;
+          float: left;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
+
+        .sign__in {
+          width: 50%;
+          height: 100%;
+          float: right;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        input {
+          padding-left: 0.2em;
+          width: 50%;
+          padding: 0.83em;
+          outline: none;
+          border: 1px solid #999;
+        }
+
+        label {
+          text-transform: uppercase;
+          font-size: 1.4em;
+          margin-right: auto;
+          margin-left: 25%;
+          margin-bottom: -1em;
+          font-weight: 800;
+          color: #777;
+        }
+
+        .btn__registre__se {
+          padding: 1.2em;
+          width: 50%;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          background-color: #2d2d2d;
+          color: #fff;
+          font-size: 1.2em;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
     }
+  }
 }
 
 .esqueceu__password {
-    font-size: 1.250em;
-    font-weight: 100;
-    margin-top: -2%;
-    font-family: $bannerFont;
-    text-decoration: none;
-    color: #1d1d1d;
-    text-underline-offset: .7em;
-    
-    &:hover {
-        text-decoration: underline;
-        opacity: .75;
-    }
+  font-size: 1.25em;
+  font-weight: 100;
+  margin-top: -2%;
+  font-family: $bannerFont;
+  text-decoration: none;
+  color: #1d1d1d;
+  text-underline-offset: 0.7em;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.75;
+  }
 }
 
 .link {
-    &:hover {
-    opacity: .75;
-}
+  &:hover {
+    opacity: 0.75;
+  }
 }
 
 .google__register {
-    margin-top: 14%;
-    width: 100%;
-    height: auto;
+  margin-top: 14%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2em;
+
+  .google__btn {
+    width: 32%;
+    height: 4.3em;
+    border: 2px solid #ccc;
+    color: #1d1d1d;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 1.2em;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
 
-    .google__btn {
-        width: 32%;
-        height: 4.3em;
-        border: 2px solid #ccc;
-        color: #1d1d1d;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        outline: none;
-        background-color: transparent;
-        cursor: pointer;
+    &:hover {
+      opacity: 0.75;
+    }
 
-        &:hover {
-            opacity: .75;
-        }
+    &:active {
+      border: 2px solid #0080eb;
+    }
 
-        &:active {
-            border: 2px solid #0080eb;
-        }
-
-
-        .google__btn__text {
-            text-transform: uppercase;
-            font-weight: 600;
-            font-size: 1.5rem;
-            margin-left: 10%;
-        }
+    .google__btn__text {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-left: 10%;
+    }
 
     .google__btn__logo {
-        position: absolute;
-        background-image: url(../images/google-logo.png);
-        background-size: cover;
-        width: 23px;
-        height: 23px;
-        left: 10%;
+      position: absolute;
+      background-image: url(../images/google-logo.png);
+      background-size: cover;
+      width: 23px;
+      height: 23px;
+      left: 10%;
     }
-    }
+  }
 }
 
 .formInputWrap {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .inputError {
-    list-style: none;
-    font-size: 1.4em;
+  list-style: none;
+  font-size: 1.4em;
 }
 
 .recuperar__senha__title {
-    width: 100%;
-    height: 100%;
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 
-    span {
-        font-size: 1.6rem;
-    }
+  span {
+    font-size: 1.6rem;
+  }
+}
+
+.error__container {
+  top: 3%;
+  width: 50%;
+  background-color: #fae7ec;
+  margin: 0 auto;
+
+  .error__message {
+    padding: 2em;
+    text-align: center;
+    color: #222222;
+    position: relative;
+    padding-left: 7%;
+  }
+
+  .erro__icon {
+    position: absolute;
+    left: 3%;
+    top: 30%;
+  }
+}
+
+.senha__error {
+  background-color: #fae7ec;
+  padding: 0.5em;
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+
+.senha__erro__icon {
+  position: absolute;
+  left: 5%;
+  bottom: 20%;
 }
