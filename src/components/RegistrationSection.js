@@ -99,6 +99,7 @@ class RegistrationSection extends Component {
                 type="text"
                 name="displayName"
                 value={displayName}
+                id="name"
                 required
                 onChange={this.handleChange}
               />
@@ -107,6 +108,7 @@ class RegistrationSection extends Component {
                 type="email"
                 name="email"
                 value={email}
+                id="email"
                 required
                 onChange={this.handleChange}
               />
@@ -115,14 +117,17 @@ class RegistrationSection extends Component {
                 type="password"
                 name="password"
                 value={password}
+                id="password"
                 required
+                minLength="8"
                 onChange={this.handleChange}
               />
-              <label htmlFor="password">confirme a senha:</label>
+              <label htmlFor="confirmPassword">confirme a senha:</label>
               <FormInput
                 type="password"
                 name="confirmPassword"
                 value={confirmPassword}
+                id="confirmPassword"
                 required
                 onChange={this.handleChange}
               />

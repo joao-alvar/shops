@@ -111,6 +111,7 @@ class SignInSection extends Component {
                 type="email"
                 name="email"
                 value={email}
+                id="email"
                 required
                 onChange={this.handleChange}
               />
@@ -119,6 +120,7 @@ class SignInSection extends Component {
                 type="password"
                 name="password"
                 value={password}
+                id="password"
                 required
                 onChange={this.handleChange}
               />
