@@ -66,8 +66,8 @@ class RegistrationSection extends Component {
       this.state;
 
     return (
-      <section className="registration" style={{ height: "102vh" }}>
-        <div className="registration__container">
+      <section className="registration">
+        <div className="registration__container" style={{ height: "66em" }}>
           <div className="title__container">
             <Link to="/" style={{ textDecoration: "none" }}>
               <h1 className="registration__title">shops.</h1>

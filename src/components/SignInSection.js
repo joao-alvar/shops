@@ -54,8 +54,8 @@ class SignInSection extends Component {
     const { email, password, errors } = this.state;
 
     return (
-      <section className="registration" style={{ height: "110vh" }}>
-        <div className="registration__container">
+      <section className="registration">
+        <div className="registration__container" style={{ height: "72em" }}>
           <div className="title__container">
             <Link to="/" style={{ textDecoration: "none" }}>
               <h1 className="registration__title">shops.</h1>

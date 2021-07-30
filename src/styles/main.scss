@@ -26,8 +26,12 @@ body {
   scroll-behavior: smooth;
 }
 
-.main {
+main {
   height: 100%;
+}
+
+#root {
+  min-height: 100%;
 }
 
 @import "Nav", "HomePage", "Services", "Footer", "ShopsSection", "Registration";

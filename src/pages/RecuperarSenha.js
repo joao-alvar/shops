@@ -1,12 +1,8 @@
-import React from 'react';
-import RecuperarConta from '../components/RecuperarConta';
+import React from "react";
+import RecuperarConta from "../components/RecuperarConta";
 
-const RecuperarSenha = props => {
-    return (
-        <div>
-           <RecuperarConta />
-        </div>
-    );
-}
+const RecuperarSenha = (props) => {
+  return <RecuperarConta />;
+};
 
 export default RecuperarSenha;

@@ -47,7 +47,7 @@ class App extends Component {
   render() {
     const { currentUser } = this.props;
     return (
-      <div className="App">
+      <main className="App">
         <Switch>
           <Route
             exact
@@ -94,7 +94,7 @@ class App extends Component {
             }
           />
         </Switch>
-      </div>
+      </main>
     );
   }
 }
