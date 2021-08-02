@@ -68,7 +68,7 @@ class RecuperarConta extends Component {
             <div className="registration__links">
               <div className="recuperar__senha__title">
                 <span className="">
-                  enviaremos um e-mail para você redefinir sua senha
+                  enviaremos um e-mail para você redefinir sua senha.
                 </span>
               </div>
             </div>
