@@ -60,42 +60,53 @@
     gap: 4em;
 
     .cards__container {
-      width: 3.4em;
-      height: 3.4em;
       background-color: #fff;
       border-radius: 100px;
       display: flex;
+      border: 1px solid #fff;
       align-items: center;
       justify-content: center;
 
       &:hover {
-        border: 1px solid #0080eb;
+        border-color: #0080eb;
+
+        .cards {
+          border: 1px solid #fff;
+        }
       }
 
       .cards {
-        width: 3em;
-        height: 3em;
+        width: 3.1em;
+        height: 3.1em;
         border-radius: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
       }
 
       .facebook__icon {
         background-color: #3b5998;
+        border: 2px solid #3b5998;
+        padding-left: 0.7px;
       }
 
       .instagram__icon {
         background-color: #811b81;
+        border: 2px solid #811b81;
+        padding-left: 0.7px;
       }
       .snapchat__icon {
         background-color: #fffc00;
+        border: 2px solid #fffc00;
+        padding-left: 2.7px;
+
         .snapchat__icon__wrap {
           background-image: url(../images/snapchat-icon.png);
           background-size: cover;
+          background-position: center;
           width: 30px;
           height: 30px;
-          left: 10%;
         }
       }
     }
