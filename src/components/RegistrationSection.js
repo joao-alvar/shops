@@ -128,6 +128,7 @@ class RegistrationSection extends Component {
                 name="confirmPassword"
                 value={confirmPassword}
                 id="confirmPassword"
+                minLength="8"
                 required
                 onChange={this.handleChange}
               />
