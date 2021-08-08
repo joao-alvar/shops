@@ -45,9 +45,9 @@ const Services = (props) => {
               </Link>
             </div>
           </li>
-          <span className="border__icon"></span>
         </ul>
         <ul className="cards__icon__wrap">
+          <span className="border__icon"></span>
           <li>
             <div className="cards__icon visaCard"></div>
           </li>

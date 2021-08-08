@@ -53,19 +53,11 @@
   }
 
   .social__card {
-    padding-right: 5%;
-    width: 50%;
+    width: 44%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 4em;
-
-    .border__icon {
-      width: 20px;
-      height: 2em;
-      background-color: #fff;
-      border-right: 1px solid #999;
-    }
 
     .cards__container {
       width: 3.4em;
@@ -115,7 +107,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 4em;
+  padding-left: 5em;
+  gap: 5em;
 
   .cards__icon {
     width: 1.2em;
@@ -136,4 +129,10 @@
   .payPalCard {
     background-image: url(../images/payPal-icon.png);
   }
+}
+
+.border__icon {
+  width: 2px;
+  height: 2em;
+  border-left: 1px solid #999;
 }
