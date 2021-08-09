@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { auth, handleUserProfile } from "./firebase/utils";
@@ -7,6 +7,9 @@ import { setCurrentUser } from "./redux/User/user.actions";
 // Theme Nav
 import MainNav from "./Themes/MainNav";
 import SecondaryNav from "./Themes/SecondaryNav";
+
+// hoc
+import WithAuth from "./hoc/withAuth";
 
 // Pages
 import HomePage from "./pages/HomePage";
@@ -18,14 +21,13 @@ import NavSectionHomens from "./Themes/NavSectionHomens";
 import ShopsHomens from "./pages/ShopsHomens";
 import SignIn from "./pages/SignIn";
 import RecuperarSenha from "./pages/RecuperarSenha";
+import Dashboard from "./pages/Dashboard";
 
-class App extends Component {
-  authListener = null;
+const App = (props) => {
+  const { setCurrentUser, currentUser } = props;
 
-  componentDidMount() {
-    const { setCurrentUser } = this.props;
-
-    this.authListener = auth.onAuthStateChanged(async (userAuth) => {
+  useEffect(() => {
+    const authListener = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await handleUserProfile(userAuth);
         userRef.onSnapshot((snapshot) => {
@@ -38,66 +40,64 @@ class App extends Component {
 
       setCurrentUser(userAuth);
     });
-  }
 
-  componentWillUnmount() {
-    this.authListener();
-  }
+    return () => {
+      authListener();
+    };
+  }, []);
 
-  render() {
-    const { currentUser } = this.props;
-    return (
-      <main className="App">
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <MainNav>
-                <HomePage />
-                <Footer />
-              </MainNav>
-            )}
-          />
-          <Route
-            path="/registration"
-            render={() =>
-              currentUser ? <Redirect to="/" /> : <Registration />
-            }
-          />
-          <Route
-            path="/signin"
-            render={() => (currentUser ? <Redirect to="/" /> : <SignIn />)}
-          />
-          <Route
-            path="/shopsmulheres"
-            render={() => (
-              <SecondaryNav>
-                <ShopsMulheres />
-                <Footer />
-              </SecondaryNav>
-            )}
-          />
-          <Route
-            path="/shopshomens"
-            render={() => (
-              <NavSectionHomens>
-                <ShopsHomens />
-                <Footer />
-              </NavSectionHomens>
-            )}
-          />
-          <Route
-            path="/recuperarconta"
-            render={() =>
-              currentUser ? <Redirect to="/" /> : <RecuperarSenha />
-            }
-          />
-        </Switch>
-      </main>
-    );
-  }
-}
+  return (
+    <main className="App">
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <MainNav>
+              <HomePage />
+              <Footer />
+            </MainNav>
+          )}
+        />
+        <Route
+          path="/registration"
+          render={() => (currentUser ? <Redirect to="/" /> : <Registration />)}
+        />
+        <Route
+          path="/signin"
+          render={() => (currentUser ? <Redirect to="/" /> : <SignIn />)}
+        />
+        <Route
+          path="/shopsmulheres"
+          render={() => (
+            <SecondaryNav>
+              <ShopsMulheres />
+              <Footer />
+            </SecondaryNav>
+          )}
+        />
+        <Route
+          path="/shopshomens"
+          render={() => (
+            <NavSectionHomens>
+              <ShopsHomens />
+              <Footer />
+            </NavSectionHomens>
+          )}
+        />
+        <Route path="/recuperarconta" render={() => <RecuperarSenha />} />
+        <Route
+          path="/dashboard"
+          render={() => (
+            <WithAuth>
+              <Dashboard />
+            </WithAuth>
+          )}
+        />
+      </Switch>
+    </main>
+  );
+};
 
 const mapStateToProps = ({ user }) => ({
   currentUser: user.currentUser,

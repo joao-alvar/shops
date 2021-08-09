@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 
@@ -40,6 +41,7 @@ const RegistrationSection = (props) => {
       await handleUserProfile(user, { displayName });
 
       reset();
+      props.history.push("/");
     } catch (err) {
       // console.log(err);
     }
@@ -140,4 +142,4 @@ const RegistrationSection = (props) => {
   );
 };
 
-export default RegistrationSection;
+export default withRouter(RegistrationSection);
