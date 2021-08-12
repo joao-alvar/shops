@@ -158,6 +158,7 @@ $bannerStrongFont: "Hind", sans-serif;
 
       @media (max-width: 1248px) {
         width: 70%;
+        row-gap: 7em;
       }
 
       @media (max-width: 900px) {
@@ -196,6 +197,7 @@ $bannerStrongFont: "Hind", sans-serif;
           .product__list__img {
             width: 100%;
             height: 100%;
+            cursor: pointer;
           }
         }
       }
@@ -204,11 +206,10 @@ $bannerStrongFont: "Hind", sans-serif;
         width: 100%;
         height: 17%;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        padding-top: 0.8em;
         flex-direction: column;
         text-decoration: none;
-        gap: 1.2em;
+        gap: 0.5em;
 
         .product__list__h2 {
           color: #000;
@@ -385,4 +386,37 @@ $bannerStrongFont: "Hind", sans-serif;
   @media (max-width: 1248px) {
     width: 27.5em;
   }
+}
+
+.price__content {
+  color: #d01345;
+  font-size: 1.4em;
+}
+
+.btn__minha__lista {
+  width: 56%;
+  height: 2.5em;
+  margin: 0 auto;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #000;
+  color: #000;
+  transition: 800ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  font-weight: 700;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.product__collection__title {
+  text-align: center;
+  padding-top: 2em;
+  color: #777;
+  font-weight: 500;
 }

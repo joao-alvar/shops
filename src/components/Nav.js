@@ -1,13 +1,17 @@
 import React from "react";
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
-import LocalMallOutlinedIcon from "@material-ui/icons/LocalMallOutlined";
 import SearchIcon from "@material-ui/icons/Search";
 import { auth } from "../firebase/utils";
+import CartIcon from "./cart-icon/cartIcon";
+
+const mapState = ({ user }) => ({
+  currentUser: user.currentUser,
+});
 
 const Nav = (props) => {
-  const { currentUser } = props;
+  const { currentUser } = useSelector(mapState);
   return (
     <header>
       <div className="headerContainer">
@@ -68,7 +72,7 @@ const Nav = (props) => {
           <div className="nav__icons">
             <ul className="icon__list">
               <div className="tooltip__container">
-                <li>
+                <li className="user__icon__wrap">
                   <PersonOutlineIcon
                     style={{ fontSize: 29, cursor: "pointer" }}
                   />
@@ -97,7 +101,9 @@ const Nav = (props) => {
                         <h3>minha conta</h3>
                       </li>
                       <li>
-                        <Link className="sign__in__btn">meus pedidos</Link>
+                        <Link to="/minhalista" className="sign__in__btn">
+                          meus pedidos
+                        </Link>
                       </li>
                       <li onClick={() => auth.signOut()}>
                         <Link className="register__btn">sair</Link>
@@ -107,9 +113,7 @@ const Nav = (props) => {
                 </span>
               </div>
               <li>
-                <LocalMallOutlinedIcon
-                  style={{ fontSize: 27, cursor: "pointer" }}
-                />
+                <CartIcon />
               </li>
             </ul>
           </div>
@@ -148,7 +152,4 @@ Nav.defaultProps = {
   currentUser: null,
 };
 
-const mapStateToprops = ({ user }) => ({
-  currentUser: user.currentUser,
-});
-export default connect(mapStateToprops, null)(Nav);
+export default Nav;

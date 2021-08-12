@@ -8,9 +8,6 @@ import { setCurrentUser } from "./redux/User/user.actions";
 import MainNav from "./Themes/MainNav";
 import SecondaryNav from "./Themes/SecondaryNav";
 
-// hoc
-import WithAuth from "./hoc/withAuth";
-
 // Pages
 import HomePage from "./pages/HomePage";
 import Registration from "./pages/Registration";
@@ -21,7 +18,8 @@ import NavSectionHomens from "./Themes/NavSectionHomens";
 import ShopsHomens from "./pages/ShopsHomens";
 import SignIn from "./pages/SignIn";
 import RecuperarSenha from "./pages/RecuperarSenha";
-import Dashboard from "./pages/Dashboard";
+import NotFound from "./components/notFound404";
+import ProductPage from "./components/productPage/productPage";
 
 const App = (props) => {
   const { setCurrentUser, currentUser } = props;
@@ -44,7 +42,7 @@ const App = (props) => {
     return () => {
       authListener();
     };
-  }, []);
+  }, [setCurrentUser]);
 
   return (
     <main className="App">
@@ -86,14 +84,8 @@ const App = (props) => {
           )}
         />
         <Route path="/recuperarconta" render={() => <RecuperarSenha />} />
-        <Route
-          path="/dashboard"
-          render={() => (
-            <WithAuth>
-              <Dashboard />
-            </WithAuth>
-          )}
-        />
+        <Route path="/product/:id" component={ProductPage} />
+        <Route path="*" component={NotFound} />
       </Switch>
     </main>
   );
