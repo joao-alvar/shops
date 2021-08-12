@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { isInCart } from "../../helpers";
+import { CartContext } from "../../context/cart-context";
 import { withRouter } from "react-router-dom";
 
 const FeaturedProduct = (props) => {
-  const { title, imageURL, price, history, id } = props;
+  const { title, imageURL, price, history, id, description } = props;
+  const product = { title, imageURL, price, history, id, description };
+  const { addProduct, cartItems, increase } = useContext(CartContext);
+  const itemInCart = isInCart(product, cartItems);
 
   return (
     <li className="product__list">
@@ -20,9 +25,23 @@ const FeaturedProduct = (props) => {
           <span className="price__wrap">
             <p className="price__content">R$ {price}</p>
           </span>
-          <button className="btn__minha__lista">
-            <span>minha lista</span>
-          </button>
+          {!itemInCart && (
+            <button
+              className="btn__minha__lista"
+              onClick={() => addProduct(product)}
+            >
+              <span>minha lista</span>
+            </button>
+          )}
+          {itemInCart && (
+            <button
+              className="btn__minha__lista btn__add__mais"
+              onClick={() => increase(product)}
+            >
+              {" "}
+              <span>mais um?</span>
+            </button>
+          )}
         </div>
       </div>
     </li>

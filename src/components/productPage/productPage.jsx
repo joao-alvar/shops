@@ -1,12 +1,15 @@
 import React, { useContext, useState, useEffect } from "react";
 import { withRouter } from "react-router";
 import { ProductsContext } from "../../context/products-context";
+import { CartContext } from "../../context/cart-context";
+import { isInCart } from "../../helpers";
 import SecondaryNav from "../../Themes/SecondaryNav";
 import Footer from "../Footer";
 import Services from "../Services";
 
 const ProductPage = ({ match, history: { push } }) => {
   const { products } = useContext(ProductsContext);
+  const { addProduct, cartItems, increase } = useContext(CartContext);
   const { id } = match.params;
   const [product, setProduct] = useState(null);
   useEffect(() => {
@@ -23,6 +26,7 @@ const ProductPage = ({ match, history: { push } }) => {
     return null;
   }
   const { imageURL, title, price, description } = product;
+  const itemInCart = isInCart(product, cartItems);
   return (
     <SecondaryNav>
       <section className="product__page__wrap">
@@ -39,7 +43,23 @@ const ProductPage = ({ match, history: { push } }) => {
             <p>{description}</p>
           </div>
           <div className="product__page__btn">
-            <button className="btn__product btn__primary">minha lista</button>
+            {!itemInCart && (
+              <button
+                className="btn__product btn__primary"
+                onClick={() => addProduct(product)}
+              >
+                minha lista
+              </button>
+            )}
+            {itemInCart && (
+              <button
+                className="btn__product btn__primary"
+                onClick={() => increase(product)}
+              >
+                {" "}
+                mais um?
+              </button>
+            )}
             <button className="btn__product btn__secondary">
               compre agora
             </button>
