@@ -3,9 +3,9 @@ import { withRouter } from "react-router";
 import { ProductsContext } from "../../context/products-context";
 import { CartContext } from "../../context/cart-context";
 import { isInCart } from "../../helpers";
-import SecondaryNav from "../../Themes/SecondaryNav";
 import Footer from "../Footer";
 import Services from "../Services";
+import MainNav from "../../Themes/MainNav";
 
 const ProductPage = ({ match, history: { push } }) => {
   const { products } = useContext(ProductsContext);
@@ -28,7 +28,7 @@ const ProductPage = ({ match, history: { push } }) => {
   const { imageURL, title, price, description } = product;
   const itemInCart = isInCart(product, cartItems);
   return (
-    <SecondaryNav>
+    <MainNav>
       <section className="product__page__wrap">
         <div className="product__page__img__wrap">
           <img src={imageURL} alt={title} />
@@ -68,7 +68,7 @@ const ProductPage = ({ match, history: { push } }) => {
       </section>
       <Services />
       <Footer />
-    </SecondaryNav>
+    </MainNav>
   );
 };
 

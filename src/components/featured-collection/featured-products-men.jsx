@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { ProductsContext } from "../../context/products-context";
 import FeaturedProduct from "../shared/featured-products";
 
-const FeaturedCollection = () => {
+const FeaturedCollectionMen = () => {
   const { products } = useContext(ProductsContext);
   const productItems = products
-    .filter((product, i) => i < 4)
+    .filter((product, i) => i > 3)
     .map((product) => <FeaturedProduct {...product} key={product.id} />);
 
   return (
@@ -18,4 +18,4 @@ const FeaturedCollection = () => {
   );
 };
 
-export default FeaturedCollection;
+export default FeaturedCollectionMen;

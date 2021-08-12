@@ -40,15 +40,36 @@ const SHOP_DATA = [
     title: "conjunto",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum quos at eius assumenda ipsa porro quod consectetur magni, atque maiores nesciunt voluptas quam minus aperiam illum ullam blanditiis commodi.",
-    imageURL: "",
-    price: 39.99,
+    imageURL:
+      "https://images.unsplash.com/photo-1584486483122-af7d49cf2992?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+    price: 309.99,
   },
   {
     id: 6,
     title: "conjunto",
-    description: "",
-    imageURL: "",
-    price: 39.99,
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum quos at eius assumenda ipsa porro quod consectetur magni, atque maiores nesciunt voluptas quam minus aperiam illum ullam blanditiis commodi.",
+    imageURL:
+      "https://images.unsplash.com/photo-1618453292507-4959ece6429e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+    price: 369.99,
+  },
+  {
+    id: 7,
+    title: "conjunto",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum quos at eius assumenda ipsa porro quod consectetur magni, atque maiores nesciunt voluptas quam minus aperiam illum ullam blanditiis commodi.",
+    imageURL:
+      "https://images.unsplash.com/photo-1620459082716-1082effbd961?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
+    price: 139.99,
+  },
+  {
+    id: 8,
+    title: "conjunto",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum quos at eius assumenda ipsa porro quod consectetur magni, atque maiores nesciunt voluptas quam minus aperiam illum ullam blanditiis commodi.",
+    imageURL:
+      "https://images.unsplash.com/photo-1613251803780-7fcc21e13324?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
+    price: 439.99,
   },
 ];
 
