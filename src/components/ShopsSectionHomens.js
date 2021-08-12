@@ -2,7 +2,6 @@ import React from "react";
 import shopsHomens from "../images/shopsHomens.jpg";
 import productMen5 from "../images/productMen5.jpg";
 import productMen6 from "../images/productMen6.jpg";
-import { Link } from "react-router-dom";
 import FeaturedCollectionMen from "./featured-collection/featured-products-men";
 
 const ShopsSectionHomens = (props) => {
@@ -34,48 +33,48 @@ const ShopsSectionHomens = (props) => {
         <div className="products__show__container">
           <ul className="product__show__ul">
             <li className="product__show__list">
-              <Link to="" className="product__list__link">
-                <div className="product__list__show__wrap">
-                  <div className="product__show__img">
-                    <img
-                      src={productMen5}
-                      alt=""
-                      className="product__list__img"
-                    ></img>
-                  </div>
-                  <div className="product__list__title">
-                    <h2 className="product__list__h2">Novos conjuntos</h2>
-                    <p className="product__list__p">Sua cara-metade</p>
+              <div className="product__list__show__wrap">
+                <div className="product__show__img">
+                  <img
+                    src={productMen5}
+                    alt=""
+                    className="product__list__img"
+                  ></img>
+                </div>
+                <div className="product__list__title">
+                  <h2 className="product__list__h2">Novos conjuntos</h2>
+                  <p className="product__list__p">Sua cara-metade</p>
+                  <a href="#products" className="product__show__btn">
                     <div className="product__show__btn">
                       <span className="product__show__btn__span">
                         compre agora
                       </span>
                     </div>
-                  </div>
+                  </a>
                 </div>
-              </Link>
+              </div>
             </li>
             <li className="product__show__list">
-              <Link to="" className="product__list__link">
-                <div className="product__list__show__wrap">
-                  <div className="product__show__img">
-                    <img
-                      src={productMen6}
-                      alt=""
-                      className="product__list__img"
-                    ></img>
-                  </div>
-                  <div className="product__list__title">
-                    <h2 className="product__list__h2">Novos conjuntos</h2>
-                    <p className="product__list__p">Sua cara-metade</p>
+              <div className="product__list__show__wrap">
+                <div className="product__show__img">
+                  <img
+                    src={productMen6}
+                    alt=""
+                    className="product__list__img"
+                  ></img>
+                </div>
+                <div className="product__list__title">
+                  <h2 className="product__list__h2">Novos conjuntos</h2>
+                  <p className="product__list__p">Sua cara-metade</p>
+                  <a href="#products" className="product__show__btn">
                     <div className="product__show__btn">
                       <span className="product__show__btn__span">
                         compre agora
                       </span>
                     </div>
-                  </div>
+                  </a>
                 </div>
-              </Link>
+              </div>
             </li>
           </ul>
         </div>

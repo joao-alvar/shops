@@ -3,7 +3,6 @@ import shopsMulheres from "../images/shopsMulheres.jpg";
 import productWomen5 from "../images/productWomen5.jpg";
 import productWomen6 from "../images/productWomen6.jpg";
 import FeaturedCollection from "../components/featured-collection/featured-collection";
-import { Link } from "react-router-dom";
 
 const ShopsSectionMulheres = (props) => {
   return (
@@ -36,44 +35,44 @@ const ShopsSectionMulheres = (props) => {
             <li className="product__show__list">
               <div className="product__list__show__wrap">
                 <div className="product__show__img">
-                  <Link to="" className="product__list__link">
-                    <img
-                      src={productWomen5}
-                      alt=""
-                      className="product__list__img"
-                    ></img>
-                  </Link>
+                  <img
+                    src={productWomen5}
+                    alt=""
+                    className="product__list__img"
+                  ></img>
                 </div>
                 <div className="product__list__title">
                   <h2 className="product__list__h2">Novos conjuntos</h2>
                   <p className="product__list__p">Sua cara-metade</p>
-                  <div className="product__show__btn">
-                    <span className="product__show__btn__span">
-                      compre agora
-                    </span>
-                  </div>
+                  <a href="#products" className="product__show__btn">
+                    <div className="product__show__btn">
+                      <span className="product__show__btn__span">
+                        compre agora
+                      </span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
             <li className="product__show__list">
               <div className="product__list__show__wrap">
                 <div className="product__show__img">
-                  <Link to="" className="product__list__link">
-                    <img
-                      src={productWomen6}
-                      alt=""
-                      className="product__list__img"
-                    ></img>
-                  </Link>
+                  <img
+                    src={productWomen6}
+                    alt=""
+                    className="product__list__img"
+                  ></img>
                 </div>
                 <div className="product__list__title">
                   <h2 className="product__list__h2">Novos conjuntos</h2>
                   <p className="product__list__p">Sua cara-metade</p>
-                  <div className="product__show__btn">
-                    <span className="product__show__btn__span">
-                      compre agora
-                    </span>
-                  </div>
+                  <a href="#products" className="product__show__btn">
+                    <div className="product__show__btn">
+                      <span className="product__show__btn__span">
+                        compre agora
+                      </span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
