@@ -2,9 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
-import SearchIcon from "@material-ui/icons/Search";
 import { auth } from "../firebase/utils";
 import CartIcon from "./cart-icon/cartIcon";
+import SearchBar from "./SearchBar";
 
 const mapState = ({ user }) => ({
   currentUser: user.currentUser,
@@ -57,20 +57,7 @@ const NavSection = (props) => {
             </ul>
           </div>
           <div className="search__bar__container">
-            <form className="searchForm">
-              <input
-                type="search"
-                placeholder="pesquisar por produtos"
-                className="search__bar"
-                required
-              ></input>
-              <button type="submit" className="search__bar__btn">
-                <SearchIcon
-                  style={{ fontSize: 20, cursor: "pointer" }}
-                  className="search__bar__btn__icon"
-                />
-              </button>
-            </form>
+            <SearchBar />
           </div>
           <div className="nav__icons">
             <ul className="icon__list">
@@ -105,7 +92,7 @@ const NavSection = (props) => {
                         <h3>minha conta</h3>
                       </li>
                       <li>
-                        <Link className="sign__in__btn">meus pedidos</Link>
+                        <Link className="sign__in__btn">checkout</Link>
                       </li>
                       <li onClick={() => auth.signOut()}>
                         <Link className="register__btn">sair</Link>

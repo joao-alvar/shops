@@ -21,6 +21,7 @@ import RecuperarSenha from "./pages/RecuperarSenha";
 import NotFound from "./components/notFound404";
 import ProductPage from "./components/productPage/productPage";
 import CartPage from "./pages/cart-page/CartPage";
+import SearchPage from "./pages/Search";
 
 const App = (props) => {
   const { setCurrentUser, currentUser } = props;
@@ -87,6 +88,7 @@ const App = (props) => {
         <Route path="/recuperarconta" render={() => <RecuperarSenha />} />
         <Route path="/product/:id" component={ProductPage} />
         <Route path="/minhalista" component={CartPage} />
+        <Route path="/search" component={SearchPage} />
         <Route path="*" component={NotFound} />
       </Switch>
     </main>
