@@ -85,10 +85,6 @@ header {
         font-size: 1.8em;
         transition: opacity 0.8s ease;
 
-        @media (max-width: 676px) {
-          margin-left: -1.5em;
-        }
-
         a {
           text-decoration: none;
           color: #fff;
@@ -104,7 +100,6 @@ header {
         display: flex;
 
         @media (max-width: 1023px) {
-          display: none;
         }
 
         a {
@@ -136,14 +131,23 @@ header {
     .nav__icons {
       margin-right: 4em;
 
-      @media (max-width: 1023px) {
+      @media (max-width: 767px) {
         margin-right: 1.5em;
+      }
+
+      @media (max-width: 384px) {
+        margin-right: -1.5em;
       }
 
       .icon__list {
         list-style: none;
         display: flex;
-        gap: 1.8em;
+        gap: 3.8em;
+
+        @media (max-width: 384px) {
+          margin-right: 3.5em;
+          gap: 1.8em;
+        }
       }
     }
   }
@@ -284,6 +288,12 @@ header {
     margin-left: -60px;
     z-index: 1000;
 
+    @media (max-width: 432px) {
+      width: 12em;
+      left: -41%;
+      height: 10em;
+    }
+
     ul {
       list-style: none;
       color: #2d2d2d;
@@ -303,6 +313,10 @@ header {
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: 1em;
+
+        @media (max-width: 432px) {
+          padding: 0.5em;
+        }
       }
 
       .sign__in__btn {
@@ -467,4 +481,192 @@ header {
 
 .bag__link {
   color: #fff;
+}
+
+.menu__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+
+.menu__btn__burger {
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menu__btn__burger::before,
+.menu__btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menu__btn__burger::before {
+  transform: translateY(-8px);
+}
+
+.menu__btn__burger::after {
+  transform: translateY(8px);
+}
+/* ANIMATION */
+.menu__btn {
+  &.open .menu__btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+.menu__btn {
+  &.open .menu__btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+}
+
+.menu__btn {
+  &.open .menu__btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+}
+
+.menu__icon {
+  display: none;
+}
+
+.close__icon {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .logo {
+    z-index: 105;
+  }
+  .menu__icon {
+    display: block;
+    margin-left: -2.5rem;
+    z-index: 105;
+  }
+  .nav__primary__ul {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    min-width: 465px;
+    height: 100%;
+    background-color: #191919;
+    transform: translateX(-200em);
+    top: 0;
+    transition: 0.7s;
+    z-index: 5;
+    row-gap: 5em;
+
+    @media (max-width: 545px) {
+    }
+  }
+
+  .nav__li {
+    font-size: 2em;
+    padding-left: 40%;
+  }
+
+  .nav__primary__ul {
+    &.menuOpen {
+      transform: translateX(0);
+      top: 0;
+      clip: auto;
+    }
+  }
+
+  .h3__active {
+    border: 2px solid #ccc;
+    padding-bottom: 1rem;
+    padding-top: 1.2rem;
+  }
+
+  .a__shop__for__homem,
+  .a__shop__for__mulher {
+    border-left: none !important;
+    border-right: none !important;
+  }
+}
+
+.search__icon {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .search__icon {
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search__bar__container {
+    display: none;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    transform: translateY(-200em);
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 0.7s;
+    z-index: 999;
+
+    &.menuOpen {
+      display: block;
+      transform: translateY(0);
+      top: 0;
+      clip: auto;
+    }
+
+    .searchForm {
+      height: 6em !important;
+      width: 90% !important;
+      margin-left: 5%;
+      margin-bottom: auto;
+      margin-top: 5rem;
+    }
+
+    input[type="search"] {
+      height: 4rem;
+    }
+  }
+  .close__icon {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    color: #191919;
+  }
+
+  .close__search {
+    &.menuOpen {
+      display: block;
+    }
+  }
 }

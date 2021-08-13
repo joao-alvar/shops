@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import { auth } from "../firebase/utils";
 import CartIcon from "./cart-icon/cartIcon";
+import SearchIcon from "@material-ui/icons/Search";
+import CloseIcon from "@material-ui/icons/Close";
 import SearchBar from "./SearchBar";
 
 const mapState = ({ user }) => ({
@@ -12,6 +14,19 @@ const mapState = ({ user }) => ({
 
 const NavSection = (props) => {
   const { currentUser } = useSelector(mapState);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleClick() {
+    setIsOpen(!isOpen);
+  }
+
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  function openClick() {
+    setSearchOpen(!searchOpen);
+  }
+
   return (
     <header>
       <div className="headerContainer">
@@ -31,14 +46,26 @@ const NavSection = (props) => {
         </div>
         <nav>
           <div className="nav__main__links">
+            <div className="menu__icon">
+              <div
+                className={isOpen ? "menu__btn open" : "menu__btn"}
+                onClick={handleClick}
+              >
+                <div className="menu__btn__burger"></div>
+              </div>
+            </div>
             <div className="logo">
               <h2>
                 <Link to="/">Shops.</Link>
               </h2>
             </div>
-            <ul className="nav__primary__ul">
-              <li className="li__shop__for__mulher">
-                <h3>
+            <ul
+              className={
+                isOpen ? "nav__primary__ul menuOpen" : "nav__primary__ul"
+              }
+            >
+              <li className="li__shop__for__mulher nav__li">
+                <h3 className="h3__active" onClick={handleClick}>
                   <Link
                     className="a__shop__for__mulher active__section"
                     to="/shopsmulheres"
@@ -47,8 +74,8 @@ const NavSection = (props) => {
                   </Link>
                 </h3>
               </li>
-              <li className="li__shop__for__homem">
-                <h3>
+              <li className="li__shop__for__homem nav__li">
+                <h3 onClick={handleClick}>
                   <Link className="a__shop__for__homem" to="/shopshomens">
                     Homem
                   </Link>
@@ -56,11 +83,40 @@ const NavSection = (props) => {
               </li>
             </ul>
           </div>
-          <div className="search__bar__container">
+          <div
+            className={
+              searchOpen
+                ? "search__bar__container menuOpen"
+                : "search__bar__container"
+            }
+          >
             <SearchBar />
+            <div className="close__icon">
+              <CloseIcon
+                className={
+                  searchOpen ? "close__search menuOpen" : "close__search"
+                }
+                style={{
+                  fontSize: 26,
+                  cursor: "pointer",
+                  marginTop: "2px",
+                }}
+                onClick={openClick}
+              />
+            </div>
           </div>
           <div className="nav__icons">
             <ul className="icon__list">
+              <li className="search__icon">
+                <SearchIcon
+                  style={{
+                    fontSize: 26,
+                    cursor: "pointer",
+                    marginTop: "2px",
+                  }}
+                  onClick={openClick}
+                />
+              </li>
               <div className="tooltip__container">
                 <li className="user__icon__wrap">
                   <PersonOutlineIcon
