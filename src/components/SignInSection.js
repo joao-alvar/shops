@@ -43,14 +43,18 @@ const SignInSection = (props) => {
           </Link>
         </div>
         {errors.length > 0 && (
-          <div className="error__container">
+          <div className="error__container error__wrap">
             <ul className="inputError error__message">
               <ErrorOutlineIcon
                 className="erro__icon"
                 style={{ fontSize: 29 }}
               />
               {errors.map((e, index) => {
-                return <li key={index}>{e}</li>;
+                return (
+                  <li key={index} className="error__wrap__msg">
+                    {e}
+                  </li>
+                );
               })}
             </ul>
           </div>

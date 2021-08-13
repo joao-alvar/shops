@@ -13,6 +13,7 @@ html {
 body {
   direction: ltr;
   display: flex;
+  min-width: 320px;
   flex-direction: column;
   font-family: "Nunito Sans", sans-serif;
 }

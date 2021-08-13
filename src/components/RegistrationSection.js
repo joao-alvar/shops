@@ -75,7 +75,7 @@ const RegistrationSection = (props) => {
               </Link>
             </div>
           </div>
-          <form style={{ marginTop: "14%" }} onSubmit={handleFormSubmit}>
+          <form className="registration__form" onSubmit={handleFormSubmit}>
             <label htmlFor="name">nome completo:</label>
             <FormInput
               type="text"

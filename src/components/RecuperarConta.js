@@ -49,7 +49,7 @@ const RecuperarConta = (props) => {
           </div>
           <form onSubmit={handleSubmit} style={{ marginTop: "5%" }}>
             {errors.length > 0 && (
-              <div className="error__container">
+              <div className="error__container error__wrap__email">
                 <ul className="inputError error__message">
                   <ErrorOutlineIcon
                     className="erro__icon"

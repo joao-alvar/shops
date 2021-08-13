@@ -13,9 +13,21 @@
     justify-content: center;
     background-color: #2d2d2d;
 
+    @media (max-width: 610px) {
+      display: none;
+    }
+
     .home__bottom__links {
       margin-right: auto;
       margin-left: 15%;
+
+      @media (max-width: 912px) {
+        margin-left: 5%;
+      }
+
+      @media (max-width: 680px) {
+        margin-left: 1%;
+      }
 
       a {
         text-decoration: none;
@@ -26,6 +38,14 @@
     .home__bottom__content {
       margin-left: auto;
       margin-right: 15%;
+
+      @media (max-width: 912px) {
+        margin-right: 5%;
+      }
+
+      @media (max-width: 680px) {
+        margin-right: 1%;
+      }
     }
 
     h2 {
@@ -34,6 +54,10 @@
       font-size: 1.25em;
       text-transform: uppercase;
       letter-spacing: 1.5px;
+
+      @media (max-width: 695px) {
+        font-size: clamp(1.25em, 0.5vw, 1.25em);
+      }
     }
   }
 }
@@ -43,6 +67,10 @@
   height: 6.5em;
   display: flex;
   align-items: center;
+
+  @media (max-width: 590px) {
+    display: none;
+  }
 
   ul {
     list-style: none;

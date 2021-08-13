@@ -15,6 +15,10 @@ $bannerStrongFont: "Hind", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 
+  @media (max-width: 645px) {
+    display: none;
+  }
+
   .shops__banner__text {
     width: 50%;
     height: 100%;
@@ -73,7 +77,6 @@ $bannerStrongFont: "Hind", sans-serif;
 }
 
 .shops__banner {
-  height: 8em;
   background-color: #fff;
   display: flex;
   font-weight: 800;
@@ -82,16 +85,24 @@ $bannerStrongFont: "Hind", sans-serif;
   justify-content: center;
 
   .banner__content {
-    font-size: 5.6em;
+    font-size: clamp(4.2em, 5.5vw, 5.6em);
+    margin-block-start: 0.21em;
+    margin-block-end: 0.21em;
+    margin-inline-start: 0.11em;
+    margin-inline-end: 0.11em;
+
+    @media (max-width: 556px) {
+      font-size: clamp(3.2em, 5.5vw, 5.6em);
+    }
   }
 }
 
 .banner__md__section {
-  width: 54em;
+  width: fit-content;
 }
 
 .banner__content__section {
-  width: 52em;
+  width: fit-content;
 }
 
 .shops__banner__btn {
@@ -183,8 +194,11 @@ $bannerStrongFont: "Hind", sans-serif;
       .product__list__container {
         width: 28.5em;
         height: 50em;
-        &:hover {
-          transform: scale(1.1);
+
+        @media (min-width: 1248px) {
+          &:hover {
+            transform: scale(1.1);
+          }
         }
 
         @media (max-width: 1248px) {

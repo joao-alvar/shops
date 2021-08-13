@@ -49,6 +49,13 @@ $bannerFont: "Didact Gothic", sans-serif;
       position: relative;
       flex-direction: column;
 
+      @media (max-width: 976px) {
+        width: 80%;
+      }
+      @media (max-width: 563px) {
+        width: 98%;
+      }
+
       .registration__links {
         position: absolute;
         top: 0;
@@ -102,6 +109,10 @@ $bannerFont: "Didact Gothic", sans-serif;
           padding: 0.83em;
           outline: none;
           border: 1px solid #999;
+
+          @media (max-width: 530px) {
+            width: 70%;
+          }
         }
 
         label {
@@ -112,6 +123,10 @@ $bannerFont: "Didact Gothic", sans-serif;
           margin-bottom: -1em;
           font-weight: 800;
           color: #777;
+
+          @media (max-width: 530px) {
+            margin-left: 15%;
+          }
         }
 
         .btn__registre__se {
@@ -125,6 +140,10 @@ $bannerFont: "Didact Gothic", sans-serif;
           font-size: 1.2em;
           font-weight: 700;
           text-transform: uppercase;
+
+          @media (max-width: 530px) {
+            width: 70%;
+          }
 
           &:hover {
             opacity: 0.8;
@@ -179,6 +198,9 @@ $bannerFont: "Didact Gothic", sans-serif;
     background-color: transparent;
     cursor: pointer;
 
+    @media (max-width: 530px) {
+      width: 52%;
+    }
     &:hover {
       opacity: 0.75;
     }
@@ -230,10 +252,12 @@ $bannerFont: "Didact Gothic", sans-serif;
 
 .error__container {
   top: 3%;
-  width: 50%;
   background-color: #fcd8e2;
   margin: 0 auto;
 
+  @media (max-width: 530px) {
+    width: 70%;
+  }
   .error__message {
     padding: 2em;
     text-align: center;
@@ -249,12 +273,53 @@ $bannerFont: "Didact Gothic", sans-serif;
   }
 }
 
+.error__wrap {
+  width: 50%;
+  @media (max-width: 976px) {
+    width: 80%;
+  }
+  @media (max-width: 563px) {
+    width: 98%;
+  }
+}
+
+.error__wrap__msg {
+  padding: 1rem;
+
+  @media (max-width: 390px) {
+    margin-left: 1em;
+    font-size: 1.2rem;
+    padding: 0.51rem;
+  }
+}
+
+.error__wrap__email {
+  width: 50%;
+
+  @media (max-width: 530px) {
+    width: 70%;
+  }
+}
+
+.registration__form {
+  margin-top: 14%;
+  @media (max-width: 610px) {
+    margin-top: 20%;
+  }
+  @media (max-width: 500px) {
+    margin-top: 25%;
+  }
+}
+
 .senha__error {
   background-color: #fcd8e2;
   padding: 0.5em;
   width: 50%;
   text-align: center;
   position: relative;
+  @media (max-width: 530px) {
+    width: 70%;
+  }
 }
 
 .senha__erro__icon {

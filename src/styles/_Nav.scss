@@ -85,6 +85,10 @@ header {
         font-size: 1.8em;
         transition: opacity 0.8s ease;
 
+        @media (max-width: 676px) {
+          margin-left: -1.5em;
+        }
+
         a {
           text-decoration: none;
           color: #fff;
@@ -152,6 +156,10 @@ header {
     align-items: center;
     justify-content: center;
     color: #fff;
+
+    @media (max-width: 776px) {
+      display: none;
+    }
 
     a {
       text-decoration: none;
