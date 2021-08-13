@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SearchIcon from "@material-ui/icons/Search";
 
 const SearchBar = () => {
-  const [search, setSearch] = useState("");
+  const [setSearch] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
   };
@@ -16,7 +16,6 @@ const SearchBar = () => {
         maxLength="150"
         name="search"
         required
-        value=""
         handleChange={(e) => setSearch(e.target.value)}
       />
       <button type="submit" className="search__bar__btn">
