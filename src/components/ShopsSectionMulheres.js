@@ -64,8 +64,8 @@ const ShopsSectionMulheres = (props) => {
                   ></img>
                 </div>
                 <div className="product__list__title">
-                  <h2 className="product__list__h2">Novos conjuntos</h2>
-                  <p className="product__list__p">Sua cara-metade</p>
+                  <h2 className="product__list__h2">Todos os estilos</h2>
+                  <p className="product__list__p">Se reencontre</p>
                   <a href="#products" className="product__show__btn">
                     <div className="product__show__btn">
                       <span className="product__show__btn__span">

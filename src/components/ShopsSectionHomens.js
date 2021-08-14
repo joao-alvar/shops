@@ -42,8 +42,8 @@ const ShopsSectionHomens = (props) => {
                   ></img>
                 </div>
                 <div className="product__list__title">
-                  <h2 className="product__list__h2">Novos conjuntos</h2>
-                  <p className="product__list__p">Sua cara-metade</p>
+                  <h2 className="product__list__h2">Reinventando-se</h2>
+                  <p className="product__list__p">Redefina seu estilo</p>
                   <a href="#products" className="product__show__btn">
                     <div className="product__show__btn">
                       <span className="product__show__btn__span">
@@ -64,8 +64,8 @@ const ShopsSectionHomens = (props) => {
                   ></img>
                 </div>
                 <div className="product__list__title">
-                  <h2 className="product__list__h2">Novos conjuntos</h2>
-                  <p className="product__list__p">Sua cara-metade</p>
+                  <h2 className="product__list__h2">Seu estilo Aqui</h2>
+                  <p className="product__list__p">Mostre sua Vibe</p>
                   <a href="#products" className="product__show__btn">
                     <div className="product__show__btn">
                       <span className="product__show__btn__span">
