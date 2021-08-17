@@ -6,12 +6,12 @@ Este projeto foi criado com React.
 
 ### `Sobre o projeto`
 
-É um Web app que oferece todas as funcionalidades de um site de E-Commerce. Produtos, pagina do produto com informçãoes sobre o produto possui um carrinho onde os clientes podem adcionar itens a lista também oferece a possibilidade ao cliente de fazer o login com o google authentication e também permite que usuários criem uma conta com um email.
+É um Web app que oferece todas as funcionalidades de um site de E-Commerce. Produtos, página do produto com informações sobre o produto possui um carrinho onde os clientes podem adicionar itens a lista também oferece a possibilidade ao cliente de fazer o login com o google authentication, também permite que usuários criem uma conta com um email e também permite a redefinição de senha caso necessário.
 
 ## Carrinho
 
-Os usuários podem adcionar itens, remover, limpar a lista, visualizar o total a pagar e a quantidade de itens na lista.
-os items são salvos após serem adcionados ao carrinho com LocalStorage assim mesmo com a pagina sendo recarregada os itens permanecem no carrinho.
+Os usuários podem adicionar itens, remover, limpar a lista, visualizar o total a pagar e a quantidade de itens na lista.
+os items são salvos após serem adicionados ao carrinho com LocalStorage assim mesmo com a pagina sendo recarregada os itens permanecem no carrinho.
 
 ## Authentication 
 
