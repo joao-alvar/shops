@@ -19,7 +19,7 @@ const Total = ({ itemCount, total, history, clearCart }) => {
           <div className="total__itens__pay">
             <span>Total a pagar:</span>
             <span>
-              <p>R$ {total}</p>
+              <p>R$ {total.toFixed(2)}</p>
             </span>
           </div>
           <div className="total__itens__entrega">
